@@ -2,21 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>BEST Shop</title>
+    <title>BEST Fashion</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="./functions/index.js"></script>
   </head>
   <body>
-    <div id="contentHolder" class="container"></div>
-    <script>
-      const contentHolder = document.getElementById("contentHolder");
-      void (async function () {
-        var templates = document.createElement("template");
-        templates.innerHTML = await (
-          await fetch("./views/navigationbar/navigationbar.html")
-        ).text();
-        var navbar = templates.content;
-        contentHolder.appendChild(navbar);
-      })();
+    <div class="container">
+      <div id="headerHolder" class="container-rd header"></div>
+      <div id="footerHolder" class="footer container-rd"></div>
+    </div>
+    <script type="text/javascript">
+      const navbarURL = "./views/navigationbar/navigationbar.html";
+      const footerURL = "./views/footer/footer.html";
+      const headerHolder = document.getElementById("headerHolder");
+      const footerHolder = document.getElementById("footerHolder");
+      showTemplate(headerHolder, navbarURL);
+      showTemplate(footerHolder, footerURL);
     </script>
   </body>
 </html>
