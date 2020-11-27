@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BEST Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="contentHolder" class="container"></div>
+    <script>
+      const contentHolder = document.getElementById("contentHolder");
+      void (async function () {
+        var templates = document.createElement("template");
+        templates.innerHTML = await (
+          await fetch("./views/navigationbar/navigationbar.html")
+        ).text();
+        var navbar = templates.content;
+        contentHolder.appendChild(navbar);
+      })();
+    </script>
+  </body>
+</html>
