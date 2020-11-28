@@ -8,12 +8,13 @@
   </head>
   <body>
     <div class="container">
-      <div id="headerHolder" class="container-rd header"></div>
-      <div id="footerHolder" class="footer container-rd"></div>
+      <div id="headerHolder" class="row header"></div>
+      <div class="row">Content thay đổi làm ở đây</div>
+      <div id="footerHolder" class="row footer"></div>
     </div>
     <script type="text/javascript">
-      const navbarURL = "./views/navigationbar/navigationbar.html";
-      const footerURL = "./views/footer/footer.html";
+      const navbarURL = "navigationbar/navigationbar.html";
+      const footerURL = "footer/footer.html";
       const headerHolder = document.getElementById("headerHolder");
       const footerHolder = document.getElementById("footerHolder");
       showTemplate(headerHolder, navbarURL);
