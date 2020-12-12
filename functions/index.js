@@ -9,3 +9,9 @@ function showTemplate(contentHolder, url) {
   }
   getTemplate();
 }
+
+//lấy data từ trong localStorage của browser
+function dataRequest() {
+  const products = window.localStorage.getItem("data");
+  return JSON.parse(products);
+}
