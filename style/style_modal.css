@@ -1,28 +1,52 @@
 ﻿.container {
-    width: 70%;
+    width: 50%;
     margin: auto;
     text-align: center;
 }
 /* Định dạng phần form đăng nhập*/
 .fomrgroup {
-    width: 50%;
+    width: 70%;
     margin: auto;
     display: block;
     height: 50px;
 }
 
-    .fomrgroup input {
-        float: right;
-        width: 70%;
-        height: 25px;
-        margin-right: 20px;
-        line-height: 50px;
+    .fomrgroup input button {
+        width:100%;
+        font-size:25px;
+        color:white;
+        background-color:darkblue;
+        
     }
 
     .fomrgroup b {
         font-size: 20px;
     }
 /* The Modal (background) */
+.button_1 {
+        width:100%;
+        font-size:25px;
+        color:white;
+        background-color:darkblue;
+        
+    }
+.button_2 {
+    width: 100%;
+    font-size: 25px;
+    color: black;
+    background-color:azure;
+}
+.textTitle{
+    font-weight:bold;
+    font-size:40px;
+    text-align:center
+}
+.textAddSuccess {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color:chartreuse;
+}
 .modal {
     display: none; /* mặc định được ẩn đi */
     position: fixed; /* vị trí cố định */
@@ -43,7 +67,7 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;
+    width: 50%;
 }
 
 /* The Close Button */
