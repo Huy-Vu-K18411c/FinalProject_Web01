@@ -1,0 +1,44 @@
+.cart {
+  background-color: #fff;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.title,
+.addedList {
+  display: grid;
+  grid-template-columns: 2fr 7fr 1fr;
+}
+
+.title {
+  background-color: #f7f7f7;
+  padding: 6px 6px;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  margin-bottom: 1%;
+}
+
+.addQuantity {
+  font-weight: bold;
+  background-color: #f7f7f7;
+}
+
+.addQuantity button {
+  border: none;
+  background-color: #f7f7f7;
+  font-size: 1.8em;
+  padding: 16px 16px;
+}
+
+.addQuantity button:hover {
+  color: #ba933e;
+}
+
+.cart img {
+  width: 80%;
+  height: auto;
+}
+
+.cart h4 {
+  margin: 0;
+}
