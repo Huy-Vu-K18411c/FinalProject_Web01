@@ -28,6 +28,7 @@
   background-color: #f7f7f7;
   font-size: 1.8em;
   padding: 16px 16px;
+  border-radius: 3px;
 }
 
 .addQuantity button:hover {
@@ -41,4 +42,29 @@
 
 .cart h4 {
   margin: 0;
+}
+
+.toast {
+  display: none;
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toast-active {
+  display: inline;
+}
+
+.deleteProduct button {
+  font-size: 0.6em;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 8px 8px;
+  border-radius: 3px;
+}
+
+.deleteProduct button:hover {
+  border: none;
 }

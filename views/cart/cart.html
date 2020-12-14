@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./views/cart/cart.css" />
+    <meta charset="utf-8" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./cart.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../navigationbar/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="../../functions/index.js"></script>
+    <script>
+      const app = angular.module("AngularApp", []);
+      app.controller("CartController", function ($scope) {
+        $scope.txtQuantity = 1;
+        $scope.cartProducts = dataRequest();
+        $scope.addClick = function (index) {
+          const txtQuan = document.getElementById(`txtQuantity${index}`);
+          const txtTotal = document.getElementById(`txtTotal${index}`);
+          txtQuan.innerHTML = eval(txtQuan.innerText) + 1;
+          txtTotal.innerHTML =
+            "$" +
+            Math.round(
+              eval(txtQuan.innerText) *
+                eval($scope.cartProducts[index].price.substring(1)) *
+                100
+            ) /
+              100;
+        };
+        $scope.subClick = function (index) {
+          const txtQuan = document.getElementById(`txtQuantity${index}`);
+          const txtTotal = document.getElementById(`txtTotal${index}`);
+          if (eval(txtQuan.innerText) >= 1) {
+            txtQuan.innerHTML = eval(txtQuan.innerText) - 1;
+            txtTotal.innerHTML =
+              "$" +
+              Math.round(
+                eval(txtQuan.innerText) *
+                  eval($scope.cartProducts[index].price.substring(1)) *
+                  100
+              ) /
+                100;
+          } else {
+            if (toast.classList.length == 1) {
+              toast.classList.toggle("toast-active");
+              setTimeout(() => toast.classList.remove("toast-active"), 3000);
+            }
+          }
+        };
+      });
+    </script>
   </head>
-  <body>
-    <h2>Product Cart</h2>
+  <body ng-app="AngularApp" ng-controller="CartController">
+    <div id="headerHolder" class="row header"></div>
+    <h2 style="margin-left: 5%">Shopping Cart</h2>
     <div class="cart">
       <div class="title">
         <h4>IMAGE</h4>
         <h4>PRODUCT</h4>
-        <h4>TOTAL</h4>
+        <h4 style="justify-self: flex-end">TOTAL</h4>
       </div>
-      <div class="addedList">
+      <div ng-repeat="sp in cartProducts" class="addedList">
         <img
           src="https://cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_370x.jpg?v=1589787609"
           alt="product"
         />
         <div>
-          <h4>Black Tracksuit Jacket</h4>
+          <h4>{{sp.productName}}</h4>
           <p>
-            Black <br />
-            Demo Vendor
+            {{sp.productName}}<br />
+            {{sp.brandName}}
           </p>
-          <p>$210.00</p>
-          <div style="display: flex; flex-direction: row">
+          <p>{{sp.price}}</p>
+          <div style="display: flex; flex-direction: row; align-items: center">
             <div class="addQuantity">
-              <button id="substract">-</button>
-              <b>1</b>
-              <button id="add">+</button>
+              <button ng-click="subClick($index)" id="btnSub{{$index}}">
+                -
+              </button>
+              <b style="font-size: large" id="txtQuantity{{$index}}"
+                >{{txtQuantity}}</b
+              >
+              <button ng-click="addClick($index)" id="btnAdd{{$index}}">
+                +
+              </button>
             </div>
-            <div>
+            <div class="deleteProduct">
               <button>UPDATE CART</button>
-              <button>REMOVE</button>
+              <button style="color: #ba933e; border-color: #ba933e">
+                REMOVE
+              </button>
             </div>
           </div>
         </div>
+        <div style="justify-self: flex-end">
+          <h3 id="txtTotal{{$index}}"></h3>
+        </div>
+        <p class="toast">Your quantity has reached the limitation.</p>
       </div>
     </div>
+    <script>
+      const headerHolder = document.getElementById("headerHolder");
+      const headerURL = "../navigationbar/navigationbar.html";
+      showTemplate(headerHolder, headerURL);
+    </script>
   </body>
 </html>

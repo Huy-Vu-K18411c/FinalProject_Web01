@@ -18,13 +18,11 @@
       src="./functions/hamburger.js"
     ></script>
     <script type="text/javascript">
-      const navbarURL = "navigationbar/navigationbar.html";
-      const footerURL = "footer/footer.html";
+      const navbarURL = "./views/navigationbar/navigationbar.html";
+      const footerURL = "./views/footer/footer.html";
       const cartURL = "cart/cart.html";
       const headerHolder = document.getElementById("headerHolder");
       const footerHolder = document.getElementById("footerHolder");
-      const contentHolder = document.getElementById("contentHolder");
-      showTemplate(contentHolder, cartURL);
       showTemplate(headerHolder, navbarURL);
       showTemplate(footerHolder, footerURL);
     </script>
