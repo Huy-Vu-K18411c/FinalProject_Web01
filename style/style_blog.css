@@ -1,0 +1,29 @@
+/* Image Intro */
+.blog__background {
+  position: relative;
+}
+.blog__background__direction {
+  position: absolute;
+  top: 50%;
+  left: 15vw;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1000px) {
+  .blog__background > img {
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .blog__background img {
+    width: 100%;
+    height: auto;
+  }
+  .blog__background__direction {
+    font-size: x-small;
+    top: 50%;
+    left: 5vw;
+    transform: translate(10%, -50%);
+  }
+}

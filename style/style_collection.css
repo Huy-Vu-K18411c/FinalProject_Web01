@@ -1,0 +1,35 @@
+/* Image Intro */
+.collection__background {
+  position: relative;
+}
+.collection__background__direction {
+  position: absolute;
+  top: 50%;
+  left: 15vw;
+  transform: translate(-50%, -50%);
+}
+.collection__background__direction > h1 {
+  font-size: 48px;
+}
+.collection__background__direction > span {
+  opacity: 0.8;
+}
+@media only screen and (max-width: 1000px) {
+  .collection__background > img {
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .collection__background img {
+    width: 100%;
+    height: auto;
+  }
+  .collection__background__direction {
+    font-size: x-small;
+    top: 50%;
+    left: 5vw;
+    transform: translate(10%, -50%);
+  }
+}
