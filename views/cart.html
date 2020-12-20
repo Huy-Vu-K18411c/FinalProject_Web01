@@ -15,6 +15,9 @@
         $scope.txtQuantity = 1;
         $scope.cartProducts = dataRequest();
         $scope.total = 0;
+        $scope.removeProduct = function (index) {
+          $scope.cartProducts.splice(index, 1);
+        };
         $scope.addClick = function (index) {
           const txtQuan = document.getElementById(`txtQuantity${index}`);
           const txtTotal = document.getElementById(`txtTotal${index}`);
@@ -64,20 +67,46 @@
   </head>
   <body ng-app="AngularApp" ng-controller="CartController">
     <div id="headerHolder" class="row header"></div>
-    <h2 style="margin-left: 5%">Shopping Cart</h2>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+        align-items: center;
+      "
+    >
+      <h2>Shopping Cart</h2>
+      <button
+        style="
+          border: none;
+          background-color: #3b87ee;
+          border-radius: 5px;
+          font-weight: bold;
+          color: white;
+          height: auto;
+          padding: 1%;
+        "
+      >
+        Update cart
+      </button>
+    </div>
+    <p style="margin-left: 5%; font-size: 1.1em">
+      Bạn có <b>{{cartProducts.length}}</b> sản phẩm trong giỏ hàng
+    </p>
     <div class="cart">
       <div class="title">
         <h4>IMAGE</h4>
         <h4>PRODUCT</h4>
-        <h4 style="justify-self: flex-end">TOTAL</h4>
+        <h4 style="justify-self: flex-end; padding: 5%">TOTAL</h4>
       </div>
       <div ng-repeat="sp in cartProducts" class="addedList">
         <img
-          ng-src="https://m.media-amazon.com/images/I/{{sp.imageMap.MAIN}}.jpg "
+          ng-src="https://m.media-amazon.com/images/I/{{sp.imageMap.MAIN}}.jpg"
           alt="product"
         />
         <div>
-          <h4>{{sp.productName}}</h4>
+          <h3>{{sp.productName}}</h3>
           <p>
             {{sp.productName}}<br />
             {{sp.brandName}}
@@ -96,14 +125,16 @@
               </button>
             </div>
             <div class="deleteProduct">
-              <button>UPDATE CART</button>
-              <button style="color: #ba933e; border-color: #ba933e">
+              <button
+                ng-click="removeProduct($index)"
+                style="color: #ba933e; border-color: #ba933e"
+              >
                 REMOVE
               </button>
             </div>
           </div>
         </div>
-        <div style="justify-self: flex-end">
+        <div style="justify-self: flex-end; padding-right: 10%">
           <h3 id="txtTotal{{$index}}">{{sp.price}}</h3>
         </div>
         <hr />
@@ -112,7 +143,7 @@
     <div align="right" class="totalBill">
       <p>
         <b style="font-size: 1.2em; margin-right: 1.5%">Subtotal:</b>
-        <b id="txtTotalBill" style="font-size: 1.5em; color: #ba933e"
+        <b id="txtTotalBill" style="font-size: 1.5em; color: #3b87ee"
           >{{total}}</b
         >
       </p>
@@ -125,7 +156,7 @@
       />
       <input
         id="btnCheckOut"
-        style="background-color: #ba933e; color: #fff"
+        style="background-color: #3b87ee; color: #fff"
         type="button"
         value="Check Out"
       />
