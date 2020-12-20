@@ -87,6 +87,7 @@
           height: auto;
           padding: 1%;
         "
+        onclick="reloadPage()"
       >
         Update cart
       </button>
@@ -169,6 +170,9 @@
       btnCheckOut.onclick = function () {
         window.location.href = "./information.html";
       };
+      function reloadPage() {
+        location.reload();
+      }
     </script>
   </body>
 </html>
