@@ -1,0 +1,68 @@
+.information {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  height: 100vh;
+}
+
+input,
+select {
+  padding: 2%;
+  margin-top: 1%;
+  border: 0.5px solid #d9d9d9;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  color: black;
+}
+
+input[type="checkbox"] {
+  width: 1.1vw;
+  height: 1.1vw;
+  cursor: pointer;
+}
+
+a:visited {
+  color: black;
+}
+
+.information .logo {
+  width: 15%;
+  height: auto;
+}
+
+.information .info {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 7%;
+  margin-bottom: 5%;
+}
+
+.bought-product {
+  background-color: #d9d9d9;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-input {
+  display: block;
+  width: 100%;
+}
+
+.invalid-active {
+  display: block;
+}
+
+.warning-message {
+  display: none;
+}
+
+.warning-active {
+  display: block;
+  color: red;
+}

@@ -15,3 +15,13 @@ function dataRequest() {
   const products = window.localStorage.getItem("data");
   return JSON.parse(products);
 }
+
+function cartRequest() {
+  const cart = window.localStorage.getItem("cart");
+  return JSON.parse(cart);
+}
+
+function customerInfoRequest() {
+  const customerInfo = window.localStorage.getItem("customerInfo");
+  return JSON.parse(customerInfo);
+}

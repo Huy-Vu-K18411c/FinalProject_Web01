@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Infomation - Check Out</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/infomation.css" />
+  </head>
+  <body>
+    <div class="information">
+      <div>
+        <form class="info">
+          <p><img class="logo" src="../images/logo1.png" alt="logo" /></p>
+          <div class="flex-box">
+            <p>Contact Information</p>
+            <span>Already have an account? <a href="/">Login</a></span>
+          </div>
+          <input
+            class="block-input"
+            placeholder="Email or mobile phone number"
+            name="contact"
+            id="email"
+            type="text"
+          />
+          <div class="warning-message" id="emailwarning">
+            (*) Email or Phone number is required. Please fill out this blank.
+          </div>
+          <p>
+            <input type="checkbox" /><label
+              >Keep me up to date on news and exclusive offers</label
+            >
+          </p>
+          <p>Shipping address</p>
+          <div>
+            <input
+              style="width: 40%"
+              type="text"
+              name="firstname"
+              placeholder="First name"
+              id="firstname"
+            />
+            <input
+              style="width: 40%"
+              type="text"
+              placeholder="Last name"
+              name="lastname"
+              id="lastname"
+            />
+          </div>
+          <div class="warning-message" id="namewarning">
+            (*) Your name is required. Please fill out this blank.
+          </div>
+          <input
+            class="block-input"
+            type="text"
+            placeholder="Address"
+            id="address"
+          />
+          <div class="warning-message" id="addresswarning">
+            (*) Your address is required. Please fill out this blank.
+          </div>
+          <input
+            class="block-input"
+            type="text"
+            placeholder="Apartment, suite, etc. (optional)"
+          />
+          <input class="block-input" type="text" placeholder="City" id="city" />
+          <div class="warning-message" id="citywarning">
+            (*) Your city is required. Please fill out this blank.
+          </div>
+          <select name="Country" id="country">
+            <option value="Vietnam">Vietnam</option>
+          </select>
+          <input type="number" placeholder="Postal code" id="postalcode" />
+          <div class="warning-message" id="postalcodewarning">
+            (*) Your postal code is required. Please fill out this blank.
+          </div>
+          <p>
+            <input type="checkbox" /><label>
+              Save this information for next time</label
+            >
+          </p>
+          <div class="flex-box">
+            <a href="./cart.html">&larr; Return to cart</a>
+            <input
+              style="
+                background-color: #3b87ee;
+                border: none;
+                color: #fff;
+                padding: 3%;
+                font-weight: bold;
+              "
+              type="submit"
+              value="Continue to shipping"
+              id="btnContinue"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="bought-product">your products</div>
+    </div>
+    <script>
+      const email = document.getElementById("email");
+      const lastname = document.getElementById("lastname");
+      const firstname = document.getElementById("firstname");
+      const address = document.getElementById("address");
+      const city = document.getElementById("city");
+      const postalcode = document.getElementById("postalcode");
+      const btnContinue = document.getElementById("btnContinue");
+      const emailwarning = document.getElementById("emailwarning");
+      const namewarning = document.getElementById("namewarning");
+      const addresswarning = document.getElementById("addresswarning");
+      const citywarning = document.getElementById("citywarning");
+      const postalcodewarning = document.getElementById("postalcodewarning");
+      const country = document.getElementById("country");
+      email.focus();
+      function emailCheck() {
+        if (email.value.trim().length <= 0) {
+          emailwarning.classList.replace("warning-message", "warning-active");
+          return false;
+        } else {
+          emailwarning.classList.replace("warning-active", "warning-message");
+          return true;
+        }
+      }
+
+      function nameCheck() {
+        if (
+          lastname.value.trim().length <= 0 ||
+          firstname.value.trim().length <= 0
+        ) {
+          namewarning.classList.replace("warning-message", "warning-active");
+          return false;
+        } else {
+          namewarning.classList.replace("warning-active", "warning-message");
+          return true;
+        }
+      }
+
+      function addressCheck() {
+        if (address.value.trim().length <= 0) {
+          addresswarning.classList.replace("warning-message", "warning-active");
+          return false;
+        } else {
+          addresswarning.classList.replace("warning-active", "warning-message");
+          return true;
+        }
+      }
+      function cityCheck() {
+        if (city.value.trim().length <= 0) {
+          citywarning.classList.replace("warning-message", "warning-active");
+          return false;
+        } else {
+          citywarning.classList.replace("warning-active", "warning-message");
+          return true;
+        }
+      }
+
+      function postalCodeCheck() {
+        if (postalcode.value.trim().length <= 0) {
+          postalcodewarning.classList.replace(
+            "warning-message",
+            "warning-active"
+          );
+          return false;
+        } else {
+          postalcodewarning.classList.replace(
+            "warning-active",
+            "warning-message"
+          );
+          return true;
+        }
+      }
+      email.onblur = emailCheck;
+      lastname.onblur = nameCheck;
+      firstname.onblur = nameCheck;
+      address.onblur = addressCheck;
+      city.onblur = cityCheck;
+      postalcode.onblur = postalCodeCheck;
+      btnContinue.addEventListener("click", (e) => {
+        let customerInfo = {};
+        e.preventDefault();
+        emailCheck();
+        nameCheck();
+        addressCheck();
+        cityCheck();
+        postalCodeCheck();
+        // if(emailCheck() === true && nameCheck() === true && addressCheck() === true && cityCheck() === true && postalCodeCheck() === true){
+        //   const customerInfo = {email.value.trim(), name.value.trim(), address.value.trim(), city.value.trim(), postalcode.value.trim()};
+        //   console.log(customerInfo);
+        // }
+        if (
+          emailCheck() &&
+          nameCheck() &&
+          addressCheck() &&
+          cityCheck() &&
+          postalCodeCheck()
+        ) {
+          customerInfo = {
+            contact: email.value,
+            name: name.value,
+            address: address.value,
+            city: city.value,
+            postalcode: postalcode.value,
+            country: country.value,
+          };
+          window.localStorage.setItem(
+            "customerInfo",
+            JSON.stringify(customerInfo)
+          );
+          window.location.href = "./shipping.html";
+        }
+      });
+    </script>
+  </body>
+</html>

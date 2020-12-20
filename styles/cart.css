@@ -27,8 +27,8 @@
   border: none;
   background-color: #f7f7f7;
   font-size: 1.8em;
-  padding: 16px 16px;
-  border-radius: 3px;
+  padding: 1vw 1vw;
+  border-radius: 5px;
 }
 
 .addQuantity button:hover {
@@ -42,6 +42,28 @@
 
 .cart h4 {
   margin: 0;
+}
+
+.totalBill {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1% 1%;
+}
+
+.totalBill input {
+  padding: 12px 24px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+hr {
+  background-color: gray;
+  grid-column: span 3;
+  height: 0.1px;
+  width: 100%;
+  opacity: 0.2;
 }
 
 .toast {

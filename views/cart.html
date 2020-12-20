@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="./cart.css" />
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="../navigationbar/navbar.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="../../functions/index.js"></script>
+    <script src="../../functions/navigationbar.js"></script>
     <script>
       const app = angular.module("AngularApp", []);
       app.controller("CartController", function ($scope) {
         $scope.txtQuantity = 1;
         $scope.cartProducts = dataRequest();
+        $scope.total = 0;
         $scope.addClick = function (index) {
           const txtQuan = document.getElementById(`txtQuantity${index}`);
           const txtTotal = document.getElementById(`txtTotal${index}`);
@@ -46,6 +48,17 @@
             }
           }
         };
+
+        $scope.totalBill = function () {
+          const txtTotalBill = document.getElementById("txtTotalBill");
+          for (var i = 0; i < $scope.cartProducts.length; i++) {
+            var txtTotal = document.getElementById(`txtTotal${i}`);
+            console.log(txtTotal);
+            $scope.total += eval(txtTotal.innerHTML.trim());
+          }
+          txtTotalBill.innerHTML = $scope.total;
+          console.log(txtTotalBill);
+        };
       });
     </script>
   </head>
@@ -60,7 +73,7 @@
       </div>
       <div ng-repeat="sp in cartProducts" class="addedList">
         <img
-          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_370x.jpg?v=1589787609"
+          ng-src="https://m.media-amazon.com/images/I/{{sp.imageMap.MAIN}}.jpg "
           alt="product"
         />
         <div>
@@ -91,15 +104,40 @@
           </div>
         </div>
         <div style="justify-self: flex-end">
-          <h3 id="txtTotal{{$index}}"></h3>
+          <h3 id="txtTotal{{$index}}">{{sp.price}}</h3>
         </div>
-        <p class="toast">Your quantity has reached the limitation.</p>
+        <hr />
       </div>
+    </div>
+    <div align="right" class="totalBill">
+      <p>
+        <b style="font-size: 1.2em; margin-right: 1.5%">Subtotal:</b>
+        <b id="txtTotalBill" style="font-size: 1.5em; color: #ba933e"
+          >{{total}}</b
+        >
+      </p>
+      <p>Shipping, taxes, and discounts will be calculated at checkout.</p>
+      <input
+        id="btnUpdateCart"
+        style="background-color: #fff"
+        type="button"
+        value="Update Cart"
+      />
+      <input
+        id="btnCheckOut"
+        style="background-color: #ba933e; color: #fff"
+        type="button"
+        value="Check Out"
+      />
     </div>
     <script>
       const headerHolder = document.getElementById("headerHolder");
-      const headerURL = "../navigationbar/navigationbar.html";
+      const headerURL = "./navigationbar.html";
       showTemplate(headerHolder, headerURL);
+      const btnCheckOut = document.getElementById("btnCheckOut");
+      btnCheckOut.onclick = function () {
+        window.location.href = "./information.html";
+      };
     </script>
   </body>
 </html>

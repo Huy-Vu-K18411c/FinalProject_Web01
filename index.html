@@ -4,27 +4,18 @@
     <meta charset="utf-8" />
     <title>BEST Fashion</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
     <script type="text/javascript" src="./functions/index.js"></script>
+    <script type="text/javascript" src="./functions/database.js"></script>
+    <script src="./functions/navigationbar.js"></script>
   </head>
   <body>
     <div class="container">
-      <div id="headerHolder" class="row header"></div>
-      <div id="contentHolder" class="row"></div>
-      <div id="footerHolder" class="row footer"></div>
+      <div ng-app="navBar" id="headerHolder" class="row header">
+        <nav-bar></nav-bar>
+      </div>
     </div>
-    <script
-      buffer
-      type="text/javascript"
-      src="./functions/hamburger.js"
-    ></script>
-    <script type="text/javascript">
-      const navbarURL = "./views/navigationbar/navigationbar.html";
-      const footerURL = "./views/footer/footer.html";
-      const cartURL = "cart/cart.html";
-      const headerHolder = document.getElementById("headerHolder");
-      const footerHolder = document.getElementById("footerHolder");
-      showTemplate(headerHolder, navbarURL);
-      showTemplate(footerHolder, footerURL);
-    </script>
   </body>
 </html>

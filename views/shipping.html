@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Shipping - Check Out</title>
+    <link rel="stylesheet" href="../styles/shipping.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script type="text/javascript" src="../functions/index.js"></script>
+  </head>
+  <body>
+    <div class="shipping">
+      <div>
+        <form class="shipping-payment" action="POST">
+          <div>
+            <p><img class="logo" src="../images/logo1.png" alt="logo" /></p>
+          </div>
+          <div class="info-box">
+            <div class="grid-box-info">
+              <label>Contact</label>
+              <p id="contact"></p>
+              <a href="./Information.html">Change</a>
+            </div>
+            <hr />
+            <div class="grid-box-info">
+              <label>Ship to</label>
+              <p id="shippingaddress"></p>
+              <a href="./Information.html">Change</a>
+            </div>
+          </div>
+          <p>Shipping method</p>
+          <div
+            class="info-box"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-right: 5%;
+            "
+          >
+            <div>
+              <input
+                type="radio"
+                name="shippingMethod"
+                id="normal"
+                value="normal"
+              />
+              <label for="normal">Standard</label>
+            </div>
+            <h4>Free</h4>
+            <div>
+              <input
+                type="radio"
+                name="shippingMethod"
+                id="fasttransfer"
+                value="fasttransfer"
+              />
+              <label for="fasttransfer">Fast Transfer</label>
+            </div>
+            <h4>$5</h4>
+          </div>
+          <p>Payment Method</p>
+          <div
+            class="info-box"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 3%;
+            "
+          >
+            <div>
+              <input type="radio" name="paymentMethod" id="cash" value="cash" />
+              <label for="cash">Cash</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="paymentMethod"
+                id="paypal"
+                value="paypal"
+              />
+              <label for="paypal">Paypal</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="paymentMethod"
+                id="credit"
+                value="credit"
+              />
+              <label for="credit">Credit card</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="paymentMethod"
+                id="banktransfer"
+                value="banktransfer"
+              />
+              <label for="banktransfer">Bank Transfer</label>
+            </div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-top: 3%;
+            "
+          >
+            <a href="./Information.html">&larr; Return to fill information</a>
+            <input
+              style="
+                background-color: #3b87ee;
+                border: none;
+                color: #fff;
+                padding: 3%;
+                font-weight: bold;
+              "
+              type="submit"
+              value="Finish Checkout"
+              id="btnDone"
+            />
+          </div>
+        </form>
+        <div class="shipping-payment">
+          <hr />
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              font-size: 0.7em;
+            "
+          >
+            <a href="#">Refund policy</a>
+            <a href="#">Shipping policy</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Term of service</a>
+          </div>
+        </div>
+      </div>
+      <div class="bought-product">your products</div>
+    </div>
+    <script>
+      const customerInfo = customerInfoRequest();
+      const contact = document.getElementById("contact");
+      const shippingaddress = document.getElementById("shippingaddress");
+      contact.innerHTML = customerInfo.contact;
+      shippingaddress.innerHTML =
+        customerInfo.address +
+        ", " +
+        customerInfo.city +
+        ", " +
+        customerInfo.country;
+    </script>
+  </body>
+</html>
