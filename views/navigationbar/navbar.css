@@ -1,0 +1,189 @@
+.top-comp {
+  display: grid;
+  grid-template-columns: 1.5fr 6fr 2.5fr;
+  padding: 16px 32px;
+  background-color: #fff;
+  max-height: auto;
+  min-height: 8vh;
+}
+
+.navbar {
+  justify-self: center;
+  align-self: center;
+}
+
+#hamburger {
+  display: none;
+  width: 28px;
+  height: auto;
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  cursor: pointer;
+}
+
+.navbar li a {
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+.navbar li a:visited {
+  color: black;
+}
+
+.navbar img {
+  width: 12px;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar li:hover a {
+  color: #ba933e;
+}
+
+.navbar li:hover .dropdown {
+  display: grid;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  margin-top: 1%;
+  opacity: 1;
+  animation: submenu 0.3s normal;
+}
+
+.navbar .dropdown {
+  display: none;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  justify-self: center;
+  align-self: center;
+  justify-items: center;
+}
+
+.logo img {
+  display: inline;
+  width: 30%;
+  height: auto;
+}
+
+.signin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signin img {
+  width: 20px;
+  height: 20px;
+}
+
+.signin a {
+  color: black;
+}
+
+.signin a:hover {
+  color: #ba933e;
+}
+
+.collection-dd {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.collection-dd img {
+  width: auto;
+  height: auto;
+}
+
+.navbar .collection-dd a {
+  display: inline-block;
+  color: black;
+  padding: 6px 6px;
+}
+
+.navbar .collection-dd a:hover {
+  color: #ba933e;
+}
+
+.navbar .collection-dd div {
+  align-self: center;
+  justify-self: center;
+}
+
+.navbar .shop-dd {
+  grid-template-columns: 0.5fr 1fr 2fr;
+}
+
+.shop-dd img {
+  width: 30%;
+  height: auto;
+}
+
+.promotion img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes submenu {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  body {
+    overflow-x: hidden;
+  }
+  .top-comp {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .navbar {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    background-color: #fff;
+    padding-left: 0;
+    width: 30%;
+    margin: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .navbar li {
+    opacity: 0;
+  }
+
+  #hamburger {
+    display: block;
+  }
+}
+
+.navbar.navbar-active {
+  transform: translateX(0);
+}

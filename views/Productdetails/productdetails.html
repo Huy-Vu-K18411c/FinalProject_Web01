@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/views/Productdetails/productdetails.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+</head>
+<body>
+    
+    <main>
+        <div id="links">
+            <a href="">Home</a>
+            <a href="">Accessories</a>
+            <span>Back Tracksuit Jacket</span>
+        </div>
+        <div class="detail">
+            <div class="image-container">
+                <img src="/images/productdetails/pants.png" alt="">
+            </div>
+            <div class="infor">
+                <h2>Back Tracksuit Jacket</h2>
+                <p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    &nbsp; <span>(No reviews)</span>
+                </p>
+                <p>
+                    Most of us are familiar with the iconic design of the egg shaped chair floating in the air. The Hanging Egg Chair is a critically acclaimed design that has enjoyed praise worldwide ever since the distinctive sculptural shape was created.
+                </p>
+                <p ng-app>
+                    <b>Color: {{color}}</b>
+                    <span ng-model="color"></span><br>
+                    <input type="radio" value="Black" ng-model="color" name="c" id="r1">
+                    <input type="radio" value="White" ng-model="color" name="c" id="r2">
+                    <input type="radio" value="Blue" ng-model="color" name="c" id="r3">
+                    <input type="radio" value="Grey" ng-model="color" name="c" id="r4">
+                    <label for="r1" class="dot" id="d1"></label>
+                    <label for="r2" class="dot" id="d2"></label>
+                    <label for="r3" class="dot" id="d3"></label>
+                    <label for="r4" class="dot" id="d4"></label>
+                </p>
+                <p>
+                    <strong>$210.000</strong>
+                </p>
+                <div class="buttons">
+                    <input type="number" name="" id="">
+                    <button>
+                        <i class="fas fa-shopping-basket"></i>
+                        Add To Cart
+                    </button>
+                    <button>
+                        Buy It Now
+                    </button>
+                </div>
+                <b>Availability:</b> <span>In stock</span><br>
+                <b>Product type:</b> <span>Demo Type</span><br>
+                <b>Vendor:</b> <span>Demo Vender</span><br>
+                <b>SKU:</b> <span>N/A</span><br>
+                <b>Share:</b> <span>
+                    <i class="fab fa-twitter"></i>  
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-pinterest"></i>
+                </span><br>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;900&display=swap');
+:root,*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+body{
+    background: #f5f5f5;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+header>div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header>div h5 i{
+    margin: 5px;
+}
+header h5{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+header h5>a{
+    display: inline-block;
+    height: 25px;
+    width: 100px;
+    background: #ba933e;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-top: 2px;
+    border-radius: 3px;
+}
+nav{
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    padding: 40px 40px 40px 75px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+nav>div>a{
+    margin: 25px;
+    font-size: 1.1rem;
+}
+nav a>div{
+    display: none;
+}
+a:hover{
+    color: #ba933e;
+}
+#links{
+    padding: 10px 10px 10px 100px;
+    background: #f5f5f5;
+}
+#links a::after{
+    content: ">";
+    margin: 10px;
+}
+main{
+    background: white;
+}
+main img{
+    width: 550px;
+}
+.detail{
+    padding-top: 100px;
+    padding-left: 50px;
+    display: grid;
+    grid-template-areas: 
+    "img detail";
+}
+.image-container{
+    grid-area: "img";
+}
+.infor{
+    display: "detail";
+    padding-left: 25px;
+}
+.infor h2{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.infor p{
+    margin: 25px auto 25px 0px;
+    color: #868686;
+}
+.infor strong{
+    color: #ba933e;
+    font-size: 1.2rem;
+}
+b{
+    color: #000;
+}
+input[name='c']{
+    display: none;
+}
+.dot{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 20px 5px 0px 5px;
+}
+#d1{
+    background: black;
+}
+#d2{
+    background: white;
+}
+#d3{
+    background: blue;
+}
+#d4{
+    background: grey;
+}
+#r1:checked~#d1{
+    border: 3px black;
+}
+#r2:checked~#d2{
+    border: 3px black;
+}
+#r3:checked~#d3{
+    border: 3px black;
+}
+#r4:checked~#d4{
+    border: 3px black;
+}
+input[type='number']{
+    width: 100px;
+    height: 60px;
+}
+.infor .buttons button{
+    background: black;
+    color: white;
+    height: 60px;
+    font-weight: 900;
+    padding: 15px 30px 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .8s;
+}
+.infor .buttons button:hover{
+    background: #ba933e;
+}

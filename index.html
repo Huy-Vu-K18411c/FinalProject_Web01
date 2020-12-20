@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BEST Fashion</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="./functions/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="headerHolder" class="row header"></div>
+      <div class="row">Content thay đổi làm ở đây</div>
+      <div id="footerHolder" class="row footer"></div>
+    </div>
+    <script
+      buffer
+      type="text/javascript"
+      src="./functions/hamburger.js"
+    ></script>
+    <script type="text/javascript">
+      const navbarURL = "navigationbar/navigationbar.html";
+      const footerURL = "footer/footer.html";
+      const headerHolder = document.getElementById("headerHolder");
+      const footerHolder = document.getElementById("footerHolder");
+      showTemplate(headerHolder, navbarURL);
+      showTemplate(footerHolder, footerURL);
+    </script>
+  </body>
+</html>
