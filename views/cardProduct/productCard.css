@@ -1,4 +1,4 @@
-:root{
+:root {
   --yellow: #ba933e;
 }
 body {
@@ -25,28 +25,26 @@ body {
 .container-rd {
   grid-column: span 3;
   width: 100%;
-  padding: 30px 50px  ;
+  padding: 30px 50px;
   height: max-content;
 }
 
 .container-nd {
   grid-column: span 6;
   width: 100%;
-  padding: 70px 50px  ;
+  padding: 70px 50px;
   height: max-content;
-  float:right;
+  float: right;
 }
 
 .container-th {
   grid-column: span 3;
   width: 100%;
-  
 }
 
 .container-sm {
   grid-column: span 2;
   width: 100%;
-
 }
 
 .centered-content {
@@ -63,26 +61,26 @@ body {
 .left-center {
   position: absolute;
   top: 50%;
-  bottom:50%;
+  bottom: 50%;
   padding-left: 70px;
 }
 h6 a:hover {
-  color:#999999
+  color: #999999;
 }
-.dropdownmenu{
+.dropdownmenu {
   display: none;
 }
-#dropdownbtn:checked~.dropdownmenu{
+#dropdownbtn:checked ~ .dropdownmenu {
   display: block;
 }
-ul{
+ul {
   list-style-type: none;
   padding: 0px;
 }
-input[name='color']{
+input[name="color"] {
   display: none;
 }
-.dot{
+.dot {
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -90,78 +88,78 @@ input[name='color']{
   border: 1px solid black;
   box-sizing: border-box;
 }
-#d1{
+#d1 {
   background: black;
 }
-#d2{
+#d2 {
   background: blue;
 }
-#d3{
+#d3 {
   background: grey;
 }
-#d4{
+#d4 {
   background: white;
 }
-#color-r1:checked~.labels #d1{
+#color-r1:checked ~ .labels #d1 {
   border: 5px solid green;
 }
-#color-r2:checked~.labels #d2{
+#color-r2:checked ~ .labels #d2 {
   border: 5px solid green;
 }
-#color-r3:checked~.labels #d3{
+#color-r3:checked ~ .labels #d3 {
   border: 5px solid green;
 }
-#color-r4:checked~.labels #d4{
+#color-r4:checked ~ .labels #d4 {
   border: 5px solid green;
 }
-.price-label{
+.price-label {
   display: block;
-  transition: .4s;
+  transition: 0.4s;
 }
-.price-label:hover{
+.price-label:hover {
   color: var(--yellow);
 }
 .product {
-    color:black;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url('//cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290');
-    
+  color: black;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("//cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290");
 }
-option{
+option {
   font-weight: normal;
   display: block;
   white-space: pre;
   min-height: 1.2em;
   padding: 0px 2px 1px;
 }
-select{
-  background-color: #f5f5f5 ;
+select {
+  background-color: #f5f5f5;
 }
 hr {
   padding-left: 50px;
   padding-right: 50px;
 }
-.product-item-img{
+.product-item-img {
   width: 100%;
   overflow: hidden;
 }
-.product-item-img img{
+.product-item-img img {
   width: 100%;
   border-radius: 7px 7px 0px 0px;
   transition: 0.8s;
 }
-.product-item-detail{
+.product-item-detail {
   padding: 10px;
   min-height: 200px;
   cursor: pointer;
 }
-.product-item-detail:hover h2{
-  color: var(--red);}
-   .cuisine{
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.product-item-detail:hover h2 {
+  color: var(--red);
+}
+.cuisine {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
