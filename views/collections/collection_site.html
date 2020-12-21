@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="../../styles/navbar.css" />
     <link rel="stylesheet" href="../../style/style_collection.css" />
+    <link rel="stylesheet" href="../../style/style_footer.css" />
     <link
       rel="stylesheet"
       media="mediatype and|not|only (expressions)"
@@ -62,10 +63,10 @@
     </script>
   </head>
   <body ng-app="AngularApp" ng-controller="CollectionController">
-    <div ng-app="navBar">
-      <div ng-include="'../navigationbar.html'"></div>
-    </div>
     <div class="collection">
+      <div ng-app="navBar">
+        <div ng-include="'../navigationbar.html'"></div>
+      </div>
       <div class="collection__background">
         <div class="collection__background__direction">
           <h1>Collections</h1>
@@ -84,9 +85,9 @@
           <button>SHOP THE COLLECTION</button>
         </div>
       </div>
-    </div>
-    <div ng-app="footer" class="footer">
-      <div ng-include="'../footer.html'"></div>
+      <div ng-app="footer" class="footer">
+        <div ng-include="'../footer.html'"></div>
+      </div>
     </div>
   </body>
 </html>
