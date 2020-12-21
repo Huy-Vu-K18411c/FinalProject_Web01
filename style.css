@@ -10,6 +10,7 @@ body {
 .row {
   width: 100%;
   grid-column: span 12;
+  background-image: url('//cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290');
 }
 
 .container {

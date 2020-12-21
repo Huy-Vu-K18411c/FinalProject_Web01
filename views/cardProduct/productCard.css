@@ -9,10 +9,12 @@ body {
   height: max-content;
   background-color: #f5f5f5;
 }
-
 .row {
   width: 100%;
   grid-column: span 12;
+  height: 480spx;
+  position: relative;
+  text-align: center;
 }
 
 .container {
@@ -21,23 +23,30 @@ body {
 }
 
 .container-rd {
-  grid-column: span 4;
+  grid-column: span 3;
   width: 100%;
+  padding: 30px 50px  ;
+  height: max-content;
 }
 
 .container-nd {
   grid-column: span 6;
   width: 100%;
+  padding: 70px 50px  ;
+  height: max-content;
+  float:right;
 }
 
 .container-th {
   grid-column: span 3;
   width: 100%;
+  
 }
 
 .container-sm {
   grid-column: span 2;
   width: 100%;
+
 }
 
 .centered-content {
@@ -51,8 +60,14 @@ body {
     grid-template-columns: 1fr;
   }
 }
-.priceofproduct{
-
+.left-center {
+  position: absolute;
+  top: 50%;
+  bottom:50%;
+  padding-left: 70px;
+}
+h6 a:hover {
+  color:#999999
 }
 .dropdownmenu{
   display: none;
@@ -105,4 +120,26 @@ input[name='color']{
 }
 .price-label:hover{
   color: var(--yellow);
+}
+.product {
+    color:black;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('//cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290');
+    
+}
+option{
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+select{
+  background-color: #f5f5f5 ;
+}
+hr {
+  padding-left: 50px;
+  padding-right: 50px;
 }
