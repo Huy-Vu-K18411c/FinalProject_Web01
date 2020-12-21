@@ -3,8 +3,8 @@
   --golden: #ba933e;
 }
 .slider {
-  width: 800px;
-  height: 500px;
+  margin: auto;
+  width: 90%;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -25,13 +25,16 @@
 }
 
 .slide img {
-  width: 800px;
-  height: 500px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-.navigation-manual {
+.carousel-manual {
   position: absolute;
-  width: 800px;
+  width: 100%;
   margin-top: -40px;
   display: flex;
   justify-content: center;
@@ -71,22 +74,22 @@
 
 /*css for automatic navigation*/
 
-.navigation-auto {
+.carousel-auto {
   position: absolute;
   display: flex;
-  width: 800px;
+  width: 100%;
   justify-content: center;
   margin-top: 460px;
 }
 
-.navigation-auto div {
+.carousel-auto div {
   border: 2px solid var(--golden);
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
 }
 
-.navigation-auto div:not(:last-child) {
+.carousel-auto div:not(:last-child) {
   margin-right: 40px;
 }
 
