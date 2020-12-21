@@ -10,8 +10,8 @@
     <script src="../../functions/index.js"></script>
     <script src="../../functions/navigationbar.js"></script>
     <script>
-      const app = angular.module("AngularApp", []);
-      app.controller("CartController", function ($scope) {
+      const myApp = angular.module("AngularApp", []);
+      myApp.controller("CartController", function ($scope) {
         $scope.txtQuantity = 1;
         $scope.cartProducts = dataRequest();
         $scope.total = 0;
