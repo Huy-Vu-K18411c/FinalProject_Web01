@@ -1,17 +1,19 @@
 ﻿<!DOCTYPE html>
-
 <html>
   <head>
     <title>MIU Login</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../styles/login.css" />
-    <script type="text/javascript" src="./functions/index.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <script type="text/javascript" src="../functions/index.js"></script>
+    <script type="text/javascript" src="../functions/navigationbar.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="row header"></div>
+    <div ng-app="myApp" class="container">
       <div class="container-th"></div>
       <div class="container-nd">
+        <div></div>
         <div class="login-form">
           <form action="" method="post">
             <h1>Login</h1>
@@ -34,7 +36,6 @@
           </form>
         </div>
       </div>
-      <div id="footerHolder" class="row footer"></div>
     </div>
   </body>
 </html>

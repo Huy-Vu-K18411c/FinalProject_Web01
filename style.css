@@ -128,12 +128,13 @@ ul {
   border: 1px solid #d9d9d9;
   cursor: pointer;
   border-radius: 5px;
+  height: 100%;
 }
 
 .productCard img {
   display: block;
   width: 80%;
-  height: 70%;
+  height: 60%;
   border-bottom: 1px solid #d9d9d9;
   transition: all 1s ease-in;
 }
@@ -149,7 +150,7 @@ ul {
 
 .form-group {
   flex-direction: column;
-  background-color:rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 4% 14%;
   border-radius: 5px;
 }
@@ -162,7 +163,7 @@ ul {
   transition: 0.3s ease-in-out;
 }
 
-.sponsor img{
+.sponsor img {
   width: auto;
   height: 90%;
 }
