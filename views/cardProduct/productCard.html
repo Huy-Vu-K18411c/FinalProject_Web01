@@ -3,8 +3,9 @@
   <head> 
     <link rel = "stylesheet" type="text/css" href="/views/cardProduct/productCard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="productApp" ng-controller="productController">
     <div class="row">
       <img alt="velademorubix-fashion" src="//cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290">
       <div class="left-center">
@@ -68,14 +69,17 @@
               </div>
           </div>
           <div class="container-nd">
-          <div>
-            <img class="product-card__img lazyautosizes lazyloaded" data-widths="[180,360,540,720,900,1080,1296,1512,1728,1944,2160,2376,2592,2808,3024,4320]" data-aspectratio="0.8048289738430584" data-ratio="0.8048289738430584" data-sizes="auto" alt="" data-srcset="//cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_180x.jpg?v=1589787609 180w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_360x.jpg?v=1589787609 360w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_540x.jpg?v=1589787609 540w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_720x.jpg?v=1589787609 720w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_900x.jpg?v=1589787609 900w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1080x.jpg?v=1589787609 1080w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1296x.jpg?v=1589787609 1296w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1512x.jpg?v=1589787609 1512w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1728x.jpg?v=1589787609 1728w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1944x.jpg?v=1589787609 1944w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2160x.jpg?v=1589787609 2160w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2376x.jpg?v=1589787609 2376w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2592x.jpg?v=1589787609 2592w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2808x.jpg?v=1589787609 2808w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_3024x.jpg?v=1589787609 3024w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_4320x.jpg?v=1589787609 4320w" sizes="213.27967806841045px" srcset="//cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_180x.jpg?v=1589787609 180w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_360x.jpg?v=1589787609 360w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_540x.jpg?v=1589787609 540w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_720x.jpg?v=1589787609 720w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_900x.jpg?v=1589787609 900w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1080x.jpg?v=1589787609 1080w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1296x.jpg?v=1589787609 1296w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1512x.jpg?v=1589787609 1512w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1728x.jpg?v=1589787609 1728w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_1944x.jpg?v=1589787609 1944w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2160x.jpg?v=1589787609 2160w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2376x.jpg?v=1589787609 2376w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2592x.jpg?v=1589787609 2592w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_2808x.jpg?v=1589787609 2808w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_3024x.jpg?v=1589787609 3024w, //cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_4320x.jpg?v=1589787609 4320w">
-            <strong>
-              <a href="">Back Tracksuit Jacket</a>
-            </strong>
-            <span>$210.00</span>
-            </div>
-            </div>
+            <div class="clothes" ng-repeat="productitem in productsdetails">
+                  <div>
+                      <div class="product-item-img">
+                          <img src={{productitem.img}} alt="">
+                      </div>
+                      <div class="product-item-detail">
+                          <h2>{{productitem.name}}</h2>
+                          <h3>{{productitem.price}}</h3>
+                      </div>
+                  </div>
+          </div>
           </div>
   </body>
 </html>

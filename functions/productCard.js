@@ -4,12 +4,11 @@ app.controller("productController", ($scope, $http) => {
         method: "GET",
         url: "/data/products.json"
     }).then(function success(res) {
-        $scope.items = res.data;
+        $scope.products = res.data;
 
-    }, function fail(res) {
+    }, function error(res) {
         $scope.error = res.statusText;
     });
-    
     }
 )
 
