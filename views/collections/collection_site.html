@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/navbar.css" />
     <link rel="stylesheet" href="../../style/style_collection.css" />
-    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+    <link
+      rel="stylesheet"
+      media="mediatype and|not|only (expressions)"
+      href="print.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
-    <script src="../../functions/navigationbar.js"></script>
     <title>Collections</title>
-</head>
-<body>
-    <!-- Hanf -->
-    <div ng-app="navBar" id="headerHolder" class="row header">
-        <nav-bar></nav-bar>
+  </head>
+  <body>
+    <div ng-app="">
+      <div ng-include="'../navigationbar.html'"></div>
     </div>
     <div class="collection">
-        <div class="collection__background">
-            <div class="collection__background__direction">
-                <h1>Collections</h1>
-                <span><b>Home ></b></span>
-                <span> Collections</span>
-            </div>
-            <img src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290" />
+      <div class="collection__background">
+        <div class="collection__background__direction">
+          <h1>Collections</h1>
+          <span><b>Home ></b></span>
+          <span> Collections</span>
         </div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290"
+        />
+      </div>
     </div>
-</body>
+  </body>
 </html>
