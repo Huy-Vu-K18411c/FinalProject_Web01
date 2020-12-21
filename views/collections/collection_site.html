@@ -63,10 +63,11 @@
     </script>
   </head>
   <body ng-app="AngularApp" ng-controller="CollectionController">
-    <div class="collection">
-      <div ng-app="navBar">
-        <div ng-include="'../navigationbar.html'"></div>
-      </div>
+    <div ng-app="navBar" class="component">
+      <!-- <div ng-include="'../navigationbar/navigationbar.html'"></div> -->
+      <nav-bar></nav-bar>
+    </div>
+    <div class="collection component">
       <div class="collection__background">
         <div class="collection__background__direction">
           <h1>Collections</h1>
@@ -85,9 +86,9 @@
           <button>SHOP THE COLLECTION</button>
         </div>
       </div>
-      <div ng-app="footer" class="footer">
-        <div ng-include="'../footer.html'"></div>
-      </div>
+    </div>
+    <div ng-app="footer" class="footer component">
+      <div ng-include="'../footer.html'"></div>
     </div>
   </body>
 </html>
