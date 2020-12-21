@@ -1,8 +1,11 @@
 "use strict";
-angular.module("navBar", []).component("navBar", {
-  templateUrl: "../views/navigationbar.html",
+const app = angular.module("myApp", []);
+const navbar = app.component("navBar", {
+  templateUrl: "./views/navigationbar.html",
 });
 
-angular.module("footer", []).component("footer", {
-  templateUrl: "../views/footer.html",
+const footer = app.component("footerWeb", {
+  templateUrl: "./views/footer.html",
 });
+
+angular.bootstrap(document.getElementById("headerHolder"), ["navBar"]);
