@@ -64,10 +64,9 @@
   </head>
   <body ng-app="AngularApp" ng-controller="CollectionController">
     <div ng-app="navBar" class="component">
-      <!-- <div ng-include="'../navigationbar/navigationbar.html'"></div> -->
-      <nav-bar></nav-bar>
+      <div ng-include="'../navigationbar/navigationbar.html'"></div>
     </div>
-    <div class="collection component">
+    <div class="collection">
       <div class="collection__background">
         <div class="collection__background__direction">
           <h1>Collections</h1>
@@ -80,15 +79,15 @@
       </div>
       <div class="collection__list">
         <div ng-repeat="cl in collections" class="collection__list__item">
-          <img src="{{cl.image}}" />
-          <h1>{{cl.name}}</h1>
-          <p>{{cl.quantity}} products</p>
-          <button>SHOP THE COLLECTION</button>
+          <img class="item" src="{{cl.image}}" />
+          <h1 class="item">{{cl.name}}</h1>
+          <p class="item">{{cl.quantity}} products</p>
+          <button class="item">SHOP THE COLLECTION</button>
         </div>
       </div>
     </div>
-    <div ng-app="footer" class="footer component">
-      <div ng-include="'../footer.html'"></div>
-    </div>
+    <!-- <div ng-app="footer" class="footer component" style="display: inline-block">
+      <div ng-include="'../footer.html'" style="display: inline-block"></div>
+    </div> -->
   </body>
 </html>

@@ -3,15 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../styles/navbar.css" />
     <link rel="stylesheet" href="../../style/style_blog.css" />
+    <link rel="stylesheet" href="../../style/style_footer.css" />
+    <script
+      src="https://kit.fontawesome.com/78acd19669.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       media="mediatype and|not|only (expressions)"
       href="print.css"
     />
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="../../functions/navigationbar.js"></script>
+    <script src="../../functions/footer.js"></script>
+    <title>Collections</title>
   </head>
   <body>
+    <div ng-app="navBar" class="component">
+      <div ng-include="'../navigationbar/navigationbar.html'"></div>
+    </div>
     <div class="blog">
       <div class="blog__background">
         <div class="blog__background__direction">
@@ -22,6 +36,75 @@
         <img
           src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/accessories.jpg?v=1589429290"
         />
+      </div>
+      <div class="blog__body">
+        <div class="blog__body__list">
+          <div class="blog__body__list__item">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/3_88f1294b-6888-4672-bfae-674b5c6f27fc_540x.jpg?v=1589385253"
+            />
+            <p><label>LIFE STYLE</label></p>
+            <h4><b>Author</b> <span>dd/mm/yyyy</span></h4>
+            <h2>Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              officia, hic quidem facere voluptates assumenda perspiciatis quod
+              repudiandae fugiat esse cumque, molestiae, quasi recusandae aut
+              rerum illo quas maiores error. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit
+            </p>
+            <button>Read More ></button>
+          </div>
+          <div class="blog__body__list__item">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/3_88f1294b-6888-4672-bfae-674b5c6f27fc_540x.jpg?v=1589385253"
+            />
+            <p><label>LIFE STYLE</label></p>
+            <h4><b>Author</b> <span>dd/mm/yyyy</span></h4>
+            <h2>Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              officia, hic quidem facere voluptates assumenda perspiciatis quod
+              repudiandae fugiat esse cumque, molestiae, quasi recusandae aut
+              rerum illo quas maiores error. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit
+            </p>
+            <button class="item">Read More ></button>
+          </div>
+        </div>
+        <div class="blog__body__sidebar">
+          <!-- <div class="blog__body__sidebar__search">
+            <img src="../../images/search.svg" class="icon" />
+            <input
+              type="text"
+              class="input-field"
+              type="text"
+              placeholder="Search Our Blogs"
+            />
+          </div>
+          <hr
+            class="centered-content"
+            align="center"
+            style="width: 100%; margin-top: 5rem; top: 0"
+          /> -->
+          <div class="blog__body__sidebar__search">
+            <img src="../../images/search.svg" class="icon" />
+            <input
+              type="text"
+              class="input-field"
+              type="text"
+              placeholder="Search Our Blogs"
+            />
+          </div>
+          <hr
+            style="
+              width: 75%;
+              right: 2rem;
+              position: relative;
+              margin-top: 3rem;
+            "
+          />
+        </div>
       </div>
     </div>
   </body>

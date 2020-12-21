@@ -8,6 +8,11 @@
   position: relative;
   z-index: -1;
 }
+.collection__background > img {
+  width: 100vw;
+  height: 70vh;
+  object-fit: cover;
+}
 .collection__background__direction {
   position: absolute;
   top: 50%;
@@ -21,11 +26,6 @@
   opacity: 0.8;
 }
 @media only screen and (max-width: 1000px) {
-  .collection__background > img {
-    width: 100vw;
-    height: 70vh;
-    object-fit: cover;
-  }
   .collection__background__direction h1 {
     font-size: 36px;
     padding-bottom: 0;
@@ -78,7 +78,4 @@
 }
 .collection__list__item > button:hover {
   background-color: var(--golden);
-}
-.footer {
-  margin-top: 50%;
 }
