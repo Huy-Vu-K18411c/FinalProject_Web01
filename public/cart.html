@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Shopping Cart</title>
+    <link rel="icon" href="./images/logo_250x250.png" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
@@ -13,7 +14,7 @@
       const myApp = angular.module("AngularApp", []);
       myApp.controller("CartController", function ($scope) {
         $scope.txtQuantity = 1;
-        $scope.cartProducts = dataRequest();
+        $scope.cartProducts = dataRequest().slice(0, 10);
         $scope.total = 15000;
         $scope.removeProduct = function (index) {
           $scope.cartProducts.splice(index, 1);
@@ -66,7 +67,7 @@
     </script>
   </head>
   <body ng-app="AngularApp" ng-controller="CartController">
-    <div id="headerHolder" class="row header"></div>
+    <div id="header" class="row header"></div>
     <div
       style="
         display: flex;
@@ -93,7 +94,7 @@
       </button>
     </div>
     <p style="margin-left: 5%; font-size: 1.1em">
-      Bạn có <b>{{cartProducts.length}}</b> sản phẩm trong giỏ hàng
+      You have <b>{{cartProducts.length}}</b> products in cart.
     </p>
     <div class="cart">
       <div class="title">
@@ -173,7 +174,7 @@
       />
     </div>
     <script>
-      const headerHolder = document.getElementById("headerHolder");
+      const headerHolder = document.getElementById("header");
       const headerURL = "./navigationbar.html";
       showTemplate(headerHolder, headerURL);
       const btnCheckOut = document.getElementById("btnCheckOut");

@@ -5,12 +5,35 @@
     <title>Shipping - Check Out</title>
     <link rel="stylesheet" href="./styles/shipping.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
     <script type="text/javascript" src="./functions/index.js"></script>
+    <script src="./functions/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+      const myApp = angular.module("AngularApp", []);
+      myApp.controller("CartController", function ($scope) {
+        $scope.txtQuantity = 1;
+        $scope.cartProducts = dataRequest().slice(0, 10);
+        $scope.total = 15000;
+
+        $scope.totalBill = function () {
+          const txtTotalBill = document.getElementById("txtTotalBill");
+          for (var i = 0; i < $scope.cartProducts.length; i++) {
+            var txtTotal = document.getElementById(`txtTotal${i}`);
+            console.log(txtTotal);
+            $scope.total += eval(txtTotal.innerHTML.trim());
+          }
+          txtTotalBill.innerHTML = $scope.total;
+          console.log(txtTotalBill);
+        };
+      });
+    </script>
   </head>
-  <body>
+  <body ng-app="AngularApp" ng-controller="CartController">
     <div class="shipping">
       <div>
-        <form class="shipping-payment" action="POST">
+        <form class="shipping-payment">
           <div>
             <p><img class="logo" src="./images/logo1.png" alt="logo" /></p>
           </div>
@@ -123,6 +146,36 @@
             />
           </div>
         </form>
+        <div id="myModal" class="modal">
+          <!-- Nội dung form đăng nhập -->
+          <div class="modal-content formgroup">
+            <form action="#">
+              <span class="close">&times;</span>
+              <table width="100%" style="text-align: center">
+                <tr style="height: 50px">
+                  <td rowspan="4">
+                    <img
+                      style="text-align: right"
+                      src="./images/logo_250x250.png"
+                      alt="img 0"
+                    />
+                  </td>
+                  <td class="textTitle">Thank you for buying</td>
+                </tr>
+                <tr style="height: 50px">
+                  <td class="textAddSuccess">Your cart is empty!</td>
+                </tr>
+                <tr style="height: 50px">
+                  <td>
+                    <button class="buttonBT" id="btnContinue">
+                      Continue your shopping
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
         <div class="shipping-payment">
           <hr />
           <div
@@ -139,7 +192,48 @@
           </div>
         </div>
       </div>
-      <div class="bought-product">your products</div>
+      <div class="bought-product">
+        <div class="bought-product">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-left: 5%;
+              margin-right: 5%;
+              align-items: center;
+            "
+          ></div>
+          <p style="margin-left: 5%; font-size: 1.1em">
+            You have <b>{{cartProducts.length}}</b> products in cart. <br />
+            Total: <b><font size="6em" color="#3b87ee">${{total}}</font></b>
+          </p>
+          <div class="cart">
+            <div class="title">
+              <h4>IMAGE</h4>
+              <h4>PRODUCT</h4>
+              <h4 style="justify-self: flex-end; padding: 5%">TOTAL</h4>
+            </div>
+            <div ng-repeat="sp in cartProducts" class="addedList">
+              <img
+                ng-src="https://m.media-amazon.com/images/I/{{sp.imageMap.MAIN}}.jpg"
+                alt="product"
+              />
+              <div>
+                <h3>{{sp.productName}}</h3>
+                <p>
+                  {{sp.productName}}<br />
+                  {{sp.brandName}}
+                </p>
+                <p>{{sp.price}}</p>
+              </div>
+              <div style="justify-self: flex-end; padding-right: 10%">
+                <h3 id="txtTotal{{$index}}">{{sp.price}}</h3>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       const customerInfo = customerInfoRequest();
@@ -152,6 +246,36 @@
         customerInfo.city +
         ", " +
         customerInfo.country;
+      var modal = document.getElementById("myModal");
+
+      // Lấy phần button mở Modal
+      var btn = document.getElementById("btnContinue");
+
+      // Lấy phần span đóng Modal
+      var span = document.getElementsByClassName("close")[0];
+
+      window.onload = function (event) {
+        if (event.target != modal) {
+          modal.style.display = "block";
+        }
+      };
+      // Khi button được click thi mở Modal
+      btn.onclick = function () {
+        window.location.replace("https://miushop.me/");
+        console.log("click");
+      };
+
+      // Khi span được click thì đóng Modal
+      span.onclick = function () {
+        window.location.href = "./index.html";
+      };
+
+      // Khi click ngoài Modal thì đóng Modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>

@@ -3,10 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <title>Infomation - Check Out</title>
+    <link rel="icon" href="./images/logo_250x250.png" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/infomation.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <script src="./functions/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+      const myApp = angular.module("AngularApp", []);
+      myApp.controller("CartController", function ($scope) {
+        $scope.txtQuantity = 1;
+        $scope.cartProducts = dataRequest().slice(0, 10);
+        $scope.total = 15000;
+
+        $scope.totalBill = function () {
+          const txtTotalBill = document.getElementById("txtTotalBill");
+          for (var i = 0; i < $scope.cartProducts.length; i++) {
+            var txtTotal = document.getElementById(`txtTotal${i}`);
+            console.log(txtTotal);
+            $scope.total += eval(txtTotal.innerHTML.trim());
+          }
+          txtTotalBill.innerHTML = $scope.total;
+          console.log(txtTotalBill);
+        };
+      });
+    </script>
   </head>
-  <body>
+  <body ng-app="AngularApp" ng-controller="CartController">
     <div class="information">
       <div>
         <form class="info">
@@ -99,7 +122,46 @@
           </div>
         </form>
       </div>
-      <div class="bought-product">your products</div>
+      <div class="bought-product">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-left: 5%;
+            margin-right: 5%;
+            align-items: center;
+          "
+        ></div>
+        <p style="margin-left: 5%; font-size: 1.1em">
+          You have <b>{{cartProducts.length}}</b> products in cart. <br />
+          Total: <b><font size="6em" color="#3b87ee">${{total}}</font></b>
+        </p>
+        <div class="cart">
+          <div class="title">
+            <h4>IMAGE</h4>
+            <h4>PRODUCT</h4>
+            <h4 style="justify-self: flex-end; padding: 5%">TOTAL</h4>
+          </div>
+          <div ng-repeat="sp in cartProducts" class="addedList">
+            <img
+              ng-src="https://m.media-amazon.com/images/I/{{sp.imageMap.MAIN}}.jpg"
+              alt="product"
+            />
+            <div>
+              <h3>{{sp.productName}}</h3>
+              <p>
+                {{sp.productName}}<br />
+                {{sp.brandName}}
+              </p>
+              <p>{{sp.price}}</p>
+            </div>
+            <div style="justify-self: flex-end; padding-right: 10%">
+              <h3 id="txtTotal{{$index}}">{{sp.price}}</h3>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       const email = document.getElementById("email");

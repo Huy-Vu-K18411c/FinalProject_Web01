@@ -12,6 +12,11 @@ a {
   color: black;
 }
 
+#header {
+  position: fixed;
+  z-index: 3;
+}
+
 ul {
   list-style: none;
 }

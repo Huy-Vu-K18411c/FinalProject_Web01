@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Product details</title>
+    <link rel="icon" href="./images/logo_250x250.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="./functions/index.js"></script>
     <script src="./functions/navigationbar.js"></script>
@@ -93,7 +95,7 @@
           </p>
           <div class="buttons">
             <input type="number" name="" id="" />
-            <button>
+            <button id="myBtn">
               <i class="fas fa-shopping-basket"></i>
               Add To Cart
             </button>
@@ -113,6 +115,37 @@
         </div>
       </div>
     </main>
+    <div id="myModal" class="modal">
+      <!-- Nội dung form đăng nhập -->
+      <div class="modal-content formgroup">
+        <form action="#">
+          <span class="close">&times;</span>
+          <table width="100%" style="text-align: center">
+            <tr style="height: 50px">
+              <td rowspan="4">
+                <img
+                  style="text-align: right"
+                  src="https://cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_800x.jpg?v=1589787609"
+                  alt="img 0"
+                  width="250"
+                  height="250"
+                />
+              </td>
+              <td class="textTitle">Back Tracksuit Jacket</td>
+            </tr>
+            <tr style="height: 50px">
+              <td class="textAddSuccess">Has been added <br />to the cart</td>
+            </tr>
+            <tr style="height: 50px">
+              <td><button class="buttonBT">View Cart</button></td>
+            </tr>
+            <tr style="height: 50px">
+              <td><button class="buttonBT">Check Out</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
     <div align="center" style="margin-top: 3%">
       <h1>Maybe You Like</h1>
       <p>Top products in this week</p>
@@ -124,6 +157,35 @@
     <script>
       const productDisplay = document.getElementById("productDisplay");
       displayProduct(productDisplay, 4);
+      var modal = document.getElementById("myModal");
+
+      // Lấy phần button mở Modal
+      var btn = document.getElementById("myBtn");
+
+      // Lấy phần span đóng Modal
+      var span = document.getElementsByClassName("close")[0];
+
+      window.onload = function (event) {
+        if (event.target != modal) {
+          modal.style.display = "block";
+        }
+      };
+      // Khi button được click thi mở Modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // Khi span được click thì đóng Modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Khi click ngoài Modal thì đóng Modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>
