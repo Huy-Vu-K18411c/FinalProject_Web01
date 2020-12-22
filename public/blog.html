@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/blog.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
@@ -23,64 +24,8 @@
     <script src="./functions/productDisplay.js"></script>
     <!-- <script src="../../functions/footer.js"></script> -->
     <title>Collections</title>
-    <script>
-      var app = angular.module("AngularApp", []);
-      app.controller("BlogController", function ($scope) {
-        $scope.blogs = [
-          {
-            title: "Title 1",
-            date: "22/12/2012",
-            detail:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-            author: "Nhat Han",
-          },
-          {
-            title: "Title 2",
-            date: "21/12/2012",
-            detail:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-            author: "Quang Huy",
-          },
-          {
-            title: "Title 3",
-            date: "21/12/2012",
-            detail:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-            author: "Gian Don",
-          },
-          {
-            title: "Title 4",
-            date: "20/12/2012",
-            detail:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-            author: "Hong Oanh",
-          },
-          {
-            title: "Title 5",
-            date: "20/12/2012",
-            detail:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-            author: "Minh Thu",
-          },
-          {
-            title: "Title 6",
-            date: "19/12/2012",
-            detail:
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-            author: "Nhat Han",
-          },
-        ];
-      });
-
-      function borderAnimation() {
-        document.getElementById("rect__border").style.strokeWidth = 1;
-      }
-      function stopAnimation() {
-        document.getElementById("rect__border").style.strokeWidth = 0;
-      }
-    </script>
   </head>
-  <body ng-app="AngularApp" ng-controller="BlogController">
+  <body ng-app="myApp" ng-controller="BlogController">
     <div>
       <nav-bar></nav-bar>
     </div>
@@ -110,12 +55,14 @@
             </h4>
             <h2>{{dt.title}}</h2>
             <p>{{dt.detail}}</p>
-            <button>Read More ></button>
+            <button id="btnClick" onclick="window.location='/blogdetail.html';">
+              Read More >
+            </button>
           </div>
         </div>
         <div class="blog__body__sidebar">
           <div class="blog__body__sidebar__search">
-            <img src="../../images/search.svg" class="icon" />
+            <img src="./images/search.svg" class="icon" />
             <input
               type="text"
               class="input-field"
@@ -219,7 +166,7 @@
         </div>
       </div>
     </div>
-    <div style="margin-top: 3%">
+    <div style="margin-top: 5%">
       <footer-web></footer-web>
     </div>
   </body>

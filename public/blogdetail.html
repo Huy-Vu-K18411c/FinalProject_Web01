@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="../../styles/navbar.css" />
-    <link rel="stylesheet" href="../../style/style_blog.css" />
-    <link rel="stylesheet" href="../../style/style_footer.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/blog.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <script
       src="https://kit.fontawesome.com/78acd19669.js"
       crossorigin="anonymous"
@@ -21,31 +21,10 @@
     <script src="../../functions/navigationbar.js"></script>
     <script src="../../functions/footer.js"></script>
     <title>Collections</title>
-    <script>
-      var app = angular.module("AngularApp", []);
-      app.controller("BlogController", function ($scope) {
-        $scope.blogs = [
-          {
-            title: "Anteposuerit litterarum formas.",
-            date: "22/12/2012",
-            detail:
-              "Diga, Koma and Torus are three kitchen utensils designed for Ommo, a new design-oriented brand introduced at the Ambiente show in February 2016. Minimalist approach, bright colors, stainless steel and matte plastic, abstract shapes and curved lines are the defining features of these products designed to be extremely functional, user-friendly and fun.Diga is a two-color melamine salad bowl where vegetables can be washed, drained and served. The disk at the bottom of the bowl can be turned counterclockwise to drain water when washing vegetables and it can be turned clockwise to lock the drain and hold condiments in the bowl when serving.Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Koma and Torus are two tea infusers, each with an original design and a concealed function. Koma has a round base and a long stainless steel-trimmed handle which offers a comfortable grip and allows.And the brushed steel cover opens and closes at the touch of a finger to easily fill and empty the infuser. The perfect way to enjoy brewing tea. Torus is donut-shaped and can cling to any cup. It is accompanied by a case that can contain up to three different diffusers and can be used for dry storage of loose tea.",
-            author: "Nhat Han",
-          },
-        ];
-      });
-
-      function borderAnimation() {
-        document.getElementById("rect__border").style.strokeWidth = 1;
-      }
-      function stopAnimation() {
-        document.getElementById("rect__border").style.strokeWidth = 0;
-      }
-    </script>
   </head>
-  <body ng-app="AngularApp" ng-controller="BlogController">
-    <div ng-app="navBar" class="component">
-      <div ng-include="'../navigationbar/navigationbar.html'"></div>
+  <body ng-app="myApp" ng-controller="BlogItemController">
+    <div>
+      <nav-bar></nav-bar>
     </div>
     <div class="blog">
       <div class="blog__background">
@@ -183,6 +162,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <footer-web></footer-web>
     </div>
   </body>
 </html>

@@ -7,3 +7,12 @@
 .color-picker:hover {
   transform: scale(1.2);
 }
+
+.productCard {
+  height: 100%;
+}
+
+.container {
+  row-gap: 1%;
+  column-gap: 0;
+}

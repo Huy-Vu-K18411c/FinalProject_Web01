@@ -74,7 +74,7 @@ button:hover {
   display: none; /* mặc định được ẩn đi */
   position: fixed; /* vị trí cố định */
   z-index: 1; /* Ưu tiên hiển thị trên cùng */
-  padding-top: 5%;
+  padding-top: 11%;
   left: 0;
   top: 0;
   width: 100%;

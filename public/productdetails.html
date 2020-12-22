@@ -94,12 +94,11 @@
             <strong>$210.000</strong>
           </p>
           <div class="buttons">
-            <input type="number" name="" id="" />
+            <input type="number" value="1" />
             <button id="myBtn">
               <i class="fas fa-shopping-basket"></i>
               Add To Cart
             </button>
-            <button>Buy It Now</button>
           </div>
           <b>Availability:</b> <span>In stock</span><br />
           <b>Product type:</b> <span>Demo Type</span><br />
@@ -137,10 +136,24 @@
               <td class="textAddSuccess">Has been added <br />to the cart</td>
             </tr>
             <tr style="height: 50px">
-              <td><button class="buttonBT">View Cart</button></td>
+              <td>
+                <button
+                  class="buttonBT"
+                  onclick="window.location='./cart.html';"
+                >
+                  View Cart
+                </button>
+              </td>
             </tr>
             <tr style="height: 50px">
-              <td><button class="buttonBT">Check Out</button></td>
+              <td>
+                <button
+                  class="buttonBT"
+                  onclick="window.location='./information.html';"
+                >
+                  Check Out
+                </button>
+              </td>
             </tr>
           </table>
         </form>

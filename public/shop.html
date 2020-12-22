@@ -10,6 +10,10 @@
     <script type="text/javascript" src="./functions/navigationbar.js"></script>
     <script type="text/javascript" src="./functions/index.js"></script>
     <script type="text/javascript" src="./functions/productDisplay.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
   </head>
   <body>
     <div ng-app="myApp" class="container">
@@ -24,7 +28,7 @@
         />
       </div>
       <div class="row container">
-        <div style="grid-column: span 2; grid-column: 2/4">
+        <div style="grid-column: span 2">
           <h3>Product Categories</h3>
           <div>
             <input type="radio" name="category" value="All Categories" /><label
@@ -88,10 +92,10 @@
         <div
           id="productHolder"
           class="container"
-          style="grid-column: span 8"
+          style="grid-column: span 10"
         ></div>
       </div>
-      <div class="row" style="margin-top: 10%">
+      <div class="row" style="margin-top: 20%">
         <footer-web></footer-web>
       </div>
     </div>
