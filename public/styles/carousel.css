@@ -5,6 +5,30 @@
 * {
   box-sizing: border-box;
 }
+.info{
+  position: absolute;
+  top: 45%;
+  left: 30vw;
+  transform: translate(-50%, -50%);
+}
+h1.item {
+  font-size: 300%;
+}
+button.item {
+  font-size: large;
+  font-weight: 600;
+  color: white;
+  background-color: var(--mediumblack);
+  border: none;
+  padding: 2vh 2vw;
+  transition-duration: 0.4s;
+}
+h4.item {
+  font-size: 150%;
+}
+h4.item > span {
+  color: var(--golden);
+}
 .mySlides {
   display: none;
 }
@@ -93,28 +117,14 @@
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  -webkit-animation: slide 5s ease-in-out forwards;
+  -moz-animation: slide 5s ease-in-out forwards;
+  animation: slide 5s ease-in-out forwards;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes slide {
+    from {transform: transition(0,0)}
+    to {transform: transition(3em,0)}
 }
 
 /* On smaller screens, decrease text size */
