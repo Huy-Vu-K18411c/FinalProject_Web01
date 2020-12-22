@@ -2,6 +2,8 @@
 const app = angular.module("myApp", []);
 const navbar = app.component("navBar", {
   templateUrl: "./navigationbar.html",
+angular.module("navBar", []).component("navBar", {
+  templateUrl: "../navigationbar/navigationbar.html",
 });
 
 const footer = app.component("footerWeb", {
