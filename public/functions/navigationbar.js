@@ -16,4 +16,8 @@ const signup = app.component("signUp", {
   templateUrl: "./register.html",
 });
 
+const carousel = app.component("carouSel", {
+  templateUrl: "./carousel.html",
+});
+
 angular.bootstrap(document.getElementById("headerHolder"), ["navBar"]);
