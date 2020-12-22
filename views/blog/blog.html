@@ -69,6 +69,13 @@
           },
         ];
       });
+
+      function borderAnimation() {
+        document.getElementById("rect__border").style.strokeWidth = 1;
+      }
+      function stopAnimation() {
+        document.getElementById("rect__border").style.strokeWidth = 0;
+      }
     </script>
   </head>
   <body ng-app="AngularApp" ng-controller="BlogController">
@@ -116,7 +123,7 @@
           </div>
           <hr
             style="
-              width: 75%;
+              width: 90%;
               right: 2rem;
               position: relative;
               margin-top: 3rem;
@@ -136,7 +143,7 @@
           </div>
           <hr
             style="
-              width: 75%;
+              width: 90%;
               right: 2rem;
               position: relative;
               margin-top: 3rem;
@@ -178,7 +185,7 @@
           </div>
           <hr
             style="
-              width: 75%;
+              width: 90%;
               right: 2rem;
               position: relative;
               margin-top: 3rem;
@@ -194,7 +201,19 @@
               <label>StartUp</label>
             </div>
           </div>
-          <div class="blog__body__sidebar__ads"></div>
+          <div
+            class="blog__body__sidebar__ads"
+            onmouseover="borderAnimation();"
+            onmouseout="stopAnimation();"
+          >
+            <a href="#">
+              <svg><rect id="rect__border"></rect></svg>
+              <img
+                id="advertise"
+                src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/banner2_360x.jpg?v=1589383918"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

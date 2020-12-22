@@ -90,7 +90,7 @@ body {
 .input-field {
   width: 100%;
   font-size: x-large;
-  padding: 1rem;
+  padding: 0.5em;
   text-align: left;
   border: 1px solid var(--mediumblack);
   border-radius: 3px;
@@ -133,6 +133,48 @@ body {
   background-color: var(--golden);
   color: white;
   font-weight: 600;
+}
+.blog__body__sidebar__ads {
+  position: relative;
+  z-index: 0;
+  top: 10vh;
+}
+/* .blog__body__sidebar__ads > a > img {
+  position: absolute;
+  stroke-width: 2;
+  stroke: black;
+  stroke-dasharray: 50;
+  width: 80%;
+  height: auto;
+  top: 10vh;
+  left: 1vw;
+  z-index: -1;
+} */
+a svg,
+a svg rect {
+  position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  width: 90%;
+  height: 90%;
+  fill: transparent;
+}
+a svg rect {
+  stroke-width: 0;
+  stroke: white;
+  stroke-dasharray: 100;
+  animation: border_animate 2s linear infinite;
+}
+@keyframes border_animate {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#advertise:hover ~ #rect_border {
+  animation: border_animate 2s linear infinite;
 }
 
 @media only screen and (max-width: 1000px) {
