@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MIU Login</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="./functions/index.js"></script>
+    <script type="text/javascript" src="./functions/navigationbar.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" class="container">
+      <div id="headerHolder" class="row header">
+        <nav-bar></nav-bar>
+      </div>
+      <div class="row centered-content"></div>
+      <div class="row">
+        <login-form></login-form>
+      </div>
+      <div class="row">
+        <sign-up></sign-up>
+      </div>
+      <div class="row">
+        <footer-web></footer-web>
+      </div>
+    </div>
+  </body>
+</html>

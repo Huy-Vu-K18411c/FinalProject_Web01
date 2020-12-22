@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Create an account</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="./functions/index.js"></script>
+    <script type="text/javascript" src="./functions/navigationbar.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" class="container">
+      <div id="headerHolder" class="row header"></div>
+      <div class="container-th"></div>
+      <div class="container-nd">
+        <div class="login-form">
+          <form method="post">
+            <h1>Create Account</h1>
+            <div>
+              <table width="100%">
+                <tr>
+                  <td>
+                    <div class="input-box">
+                      <input
+                        type="text"
+                        name="customer[first_name]"
+                        id="FirstName"
+                        class="form-control"
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="input-box">
+                      <input
+                        type="text"
+                        name="customer[last_name]"
+                        id="LastName"
+                        class="form-control"
+                        placeholder="Last Name"
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="input-box">
+              <i></i>
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="input-box">
+              <i></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <input class="container-nd" type="button" value="Create Account" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

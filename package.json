@@ -1,0 +1,20 @@
+{
+  "name": "FinalProject_Web01",
+  "version": "1.0.0",
+  "description": "This is Web01 Final Project of BEST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huy-Vu-K18411c/FinalProject_Web01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huy-Vu-K18411c/FinalProject_Web01/issues"
+  },
+  "homepage": "https://github.com/Huy-Vu-K18411c/FinalProject_Web01#readme"
+}

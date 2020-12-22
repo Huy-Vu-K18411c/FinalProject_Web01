@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>MIU Fashion</title>
+    <link rel="icon" href="./images/logo_250x250.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="./functions/index.js"></script>
+    <script type="text/javascript" src="./functions/database.js"></script>
+    <script type="text/javascript" src="./functions/navigationbar.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" class="container">
+      <div id="headerHolder" class="row header">
+        <nav-bar></nav-bar>
+      </div>
+
+      <div id="contentHolder" class="row">
+        <div>Carousel</div>
+        <div align="center" class="page-margin">
+          <h1>Shop by categories</h1>
+          <p>Top categories in this week</p>
+        </div>
+        <div class="product-category">
+          <table>
+            <tbody id="tbody"></tbody>
+            <tr>
+              <td rowspan="2" colspan="2">
+                <div class="image-container centered-content">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/col1_900x.jpg?v=1589383598"
+                    alt="img"
+                  />
+                  <div class="overlay">
+                    <div class="cateNav centered-content">
+                      <a style="padding: 100%" href="#">Women</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="image-container">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/col4_540x.jpg?v=1589383683"
+                    alt="img"
+                  />
+                  <div class="overlay">
+                    <div class="cateNav centered-content">
+                      <a style="padding: 100%" href="#">Shoes</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="2">
+                <div class="image-container">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/col5_540x.jpg?v=1589383702"
+                    alt="img"
+                  />
+                  <div class="overlay">
+                    <div class="cateNav centered-content">
+                      <a style="padding: 100%" href="#">Mens</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="image-container">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/col2_540x.jpg?v=1589383623"
+                    alt="img"
+                  />
+                  <div class="overlay">
+                    <div class="cateNav centered-content">
+                      <a style="padding: 100%" href="#">Accesories</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="image-container">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/col3_540x.jpg?v=1589383663"
+                    alt="img"
+                  />
+                  <div class="overlay">
+                    <div class="cateNav centered-content">
+                      <a style="padding: 100%" href="#">Backpacks</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div align="center" class="page-margin">
+          <h1>Trending Products</h1>
+          <p>Top view in this week</p>
+        </div>
+        <div id="productHolder" class="container row"></div>
+        <div class="container row page-margin">
+          <div class="centered-content container-nd">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/banner1_720x.jpg?v=1589383892"
+              alt="img"
+            />
+          </div>
+          <div class="centered-content container-nd">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/banner2_720x.jpg?v=1589383918"
+              alt="img"
+            />
+          </div>
+        </div>
+        <div align="center" class="page-margin">
+          <h1>Best Seller Products</h1>
+          <p>Top view in this week</p>
+        </div>
+        <div id="productHolder2" class="container row"></div>
+        <div
+          class="centered-content page-margin"
+          style="
+            background-image: url(//cdn.shopify.com/s/files/1/0276/4616/5110/files/bg-newsletter.jpg?v=1589384194);
+            min-height: 10%;
+            padding: 3%;
+            background-attachment: fixed;
+          "
+        >
+          <div class="centered-content form-group">
+            <h1 style="margin-bottom: 0">Subcribe To Our Newsletter</h1>
+            <p>
+              Sign up for the weekly newsletter and build better ecommerce
+              stores.
+            </p>
+            <div
+              class="page-margin"
+              style="display: flex; flex-direction: row; width: 100%; back"
+            >
+              <input type="email" style="width: 100%" />
+              <input type="button" value="Subcribe" />
+            </div>
+            <p class="page-margin">
+              We respect your privacy, so we never share your info.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row container"
+        style="padding: 4% 0%; background-color: #f8f8f8"
+      >
+        <div
+          class="container-rd"
+          align="center"
+          style="border-right: 1px solid #d9d9d9"
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/our-1_180x.png?v=1589812786"
+            alt=""
+          />
+          <h4 style="margin-bottom: 0">Free Worldwide Shipping</h4>
+          <p>On all orders over $75.00</p>
+        </div>
+        <div
+          class="container-rd"
+          align="center"
+          style="border-right: 1px solid #d9d9d9"
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/our-2_180x.png?v=1589812796"
+            alt=""
+          />
+          <h4 style="margin-bottom: 0">100% Payment Secure</h4>
+          <p>We ensure secure payment with PEV</p>
+        </div>
+        <div
+          class="container-rd"
+          align="center"
+          style="border-right: 1px solid #d9d9d9"
+        >
+          <img
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/our-3_180x.png?v=1589812804"
+            alt=""
+          />
+          <h4 style="margin-bottom: 0">30 Days Return</h4>
+          <p>Return it within 20 day for an exchange</p>
+        </div>
+      </div>
+      <div class="row">
+        <div align="center">
+          <h1>Follow us on Instagram</h1>
+          <p>@vuquanghuy.uel Instagram</p>
+        </div>
+        <div class="container row">
+          <img
+            class="container-sm"
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/1.jpg?v=1589387524"
+            alt="img"
+          />
+          <img
+            class="container-sm"
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/2_360x.jpg?v=1589387571"
+            alt="img"
+          />
+          <img
+            class="container-sm"
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/3_360x.jpg?v=1589387652"
+            alt="img"
+          />
+          <img
+            class="container-sm"
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/4_360x.jpg?v=1589387664"
+            alt="img"
+          />
+          <img
+            class="container-sm"
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/5_360x.jpg?v=1589387675"
+            alt="img"
+          />
+          <img
+            class="container-sm"
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/6_360x.jpg?v=1589387687"
+            alt="img"
+          />
+        </div>
+      </div>
+      <div
+        class="row sponsor"
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        "
+      >
+        <img
+          class="container-sm"
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/brand1.jpg?v=1589788384"
+          alt="img"
+        />
+        <img
+          class="container-sm"
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/brand2.jpg?v=1589788394"
+          alt="img"
+        />
+        <img
+          class="container-sm"
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/brand3.jpg?v=1589788401"
+          alt="img"
+        />
+        <img
+          class="container-sm"
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/brand4.jpg?v=1589788409"
+          alt="img"
+        />
+        <img
+          class="container-sm"
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/brand5.jpg?v=1589788417"
+          alt="img"
+        />
+        <img
+          class="container-sm"
+          src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/brand6.jpg?v=1589788429"
+          alt="img"
+        />
+      </div>
+      <div class="row">
+        <footer-web></footer-web>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="../functions/productDisplay.js"
+    ></script>
+    <script>
+      const productHolder = document.getElementById("productHolder");
+      displayProduct(productHolder, 8);
+      const productHolder2 = document.getElementById("productHolder2");
+      displayProduct(productHolder2, 8);
+    </script>
+  </body>
+</html>
