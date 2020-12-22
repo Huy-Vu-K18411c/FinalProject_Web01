@@ -5,6 +5,30 @@
 * {
   box-sizing: border-box;
 }
+.info{
+  position: absolute;
+  top: 45%;
+  left: 30vw;
+  transform: translate(-50%, -50%);
+}
+h1.item {
+  font-size: 300%;
+}
+button.item {
+  font-size: large;
+  font-weight: 600;
+  color: white;
+  background-color: var(--mediumblack);
+  border: none;
+  padding: 2vh 2vw;
+  transition-duration: 0.4s;
+}
+h4.item {
+  font-size: 150%;
+}
+h4.item > span {
+  color: var(--golden);
+}
 .mySlides {
   display: none;
 }
