@@ -14,7 +14,7 @@
       myApp.controller("CartController", function ($scope) {
         $scope.txtQuantity = 1;
         $scope.cartProducts = dataRequest();
-        $scope.total = 0;
+        $scope.total = 15000;
         $scope.removeProduct = function (index) {
           $scope.cartProducts.splice(index, 1);
         };
@@ -141,11 +141,21 @@
         <hr />
       </div>
     </div>
-    <div align="right" class="totalBill">
+    <div
+      align="right"
+      class="totalBill"
+      style="
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 40%;
+      "
+    >
       <p>
         <b style="font-size: 1.2em; margin-right: 1.5%">Subtotal:</b>
         <b id="txtTotalBill" style="font-size: 1.5em; color: #3b87ee"
-          >{{total}}</b
+          >${{total}}</b
         >
       </p>
       <p>Shipping, taxes, and discounts will be calculated at checkout.</p>

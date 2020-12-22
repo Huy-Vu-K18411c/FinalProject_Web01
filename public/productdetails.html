@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/productdetails.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="./functions/index.js"></script>
+    <script src="./functions/navigationbar.js"></script>
+    <script src="./functions/productDisplay.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div>
+      <nav-bar></nav-bar>
+    </div>
+    <main>
+      <div id="links">
+        <a href="">Home</a>
+        <a href="">Accessories</a>
+        <span>Back Tracksuit Jacket</span>
+      </div>
+      <div class="detail">
+        <div class="image-container">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_800x.jpg?v=1589787609"
+            alt=""
+          />
+        </div>
+        <div class="infor">
+          <h2>Back Tracksuit Jacket</h2>
+          <p>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            &nbsp; <span>(No reviews)</span>
+          </p>
+          <p>
+            Most of us are familiar with the iconic design of the egg shaped
+            chair floating in the air. The Hanging Egg Chair is a critically
+            acclaimed design that has enjoyed praise worldwide ever since the
+            distinctive sculptural shape was created.
+          </p>
+          <p ng-app>
+            <b>Color: {{color}}</b>
+            <span ng-model="color"></span><br />
+            <input
+              type="radio"
+              value="Black"
+              ng-model="color"
+              name="c"
+              id="r1"
+            />
+            <input
+              type="radio"
+              value="White"
+              ng-model="color"
+              name="c"
+              id="r2"
+            />
+            <input
+              type="radio"
+              value="Blue"
+              ng-model="color"
+              name="c"
+              id="r3"
+            />
+            <input
+              type="radio"
+              value="Grey"
+              ng-model="color"
+              name="c"
+              id="r4"
+            />
+            <label for="r1" class="dot" id="d1"></label>
+            <label for="r2" class="dot" id="d2"></label>
+            <label for="r3" class="dot" id="d3"></label>
+            <label for="r4" class="dot" id="d4"></label>
+          </p>
+          <p>
+            <strong>$210.000</strong>
+          </p>
+          <div class="buttons">
+            <input type="number" name="" id="" />
+            <button>
+              <i class="fas fa-shopping-basket"></i>
+              Add To Cart
+            </button>
+            <button>Buy It Now</button>
+          </div>
+          <b>Availability:</b> <span>In stock</span><br />
+          <b>Product type:</b> <span>Demo Type</span><br />
+          <b>Vendor:</b> <span>Demo Vender</span><br />
+          <b>SKU:</b> <span>N/A</span><br />
+          <b>Share:</b>
+          <span>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-pinterest"></i> </span
+          ><br />
+        </div>
+      </div>
+    </main>
+    <div align="center" style="margin-top: 3%">
+      <h1>Maybe You Like</h1>
+      <p>Top products in this week</p>
+    </div>
+    <div id="productDisplay" class="container row"></div>
+    <div style="margin-top: 3%">
+      <footer-web></footer-web>
+    </div>
+    <script>
+      const productDisplay = document.getElementById("productDisplay");
+      displayProduct(productDisplay, 4);
+    </script>
+  </body>
+</html>

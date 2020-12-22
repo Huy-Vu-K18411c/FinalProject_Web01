@@ -20,4 +20,8 @@ const carousel = app.component("carouSel", {
   templateUrl: "./carousel.html",
 });
 
+const productDetails = app.component("productDetail", {
+  templateUrl: "./productdetails.html",
+});
+
 angular.bootstrap(document.getElementById("headerHolder"), ["navBar"]);

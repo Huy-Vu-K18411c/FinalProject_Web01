@@ -4,6 +4,7 @@ function displayProduct(contentHolder, num = 8) {
   for (let i = 0; i < num; i++) {
     const productCard = document.createElement("div");
     const productImg = document.createElement("img");
+    const nameHolder = document.createElement("div");
     const productName = document.createElement("h4");
     const productPrice = document.createElement("p");
     let a = Math.round(Math.random() * 272);
@@ -40,10 +41,16 @@ function displayProduct(contentHolder, num = 8) {
         products[a].imageMap.MAIN +
         ".jpg";
     };
-
+    nameHolder.appendChild(productName);
+    nameHolder.appendChild(productPrice);
     productCard.appendChild(productImg);
-    productCard.appendChild(productName);
-    productName.appendChild(productPrice);
+    productCard.appendChild(nameHolder);
+    nameHolder.classList.add("centered-content");
+    nameHolder.style.flexDirection = "column";
+    productCard.onclick = function () {
+      window.location.pathname = "./productdetails.html";
+    };
+    // productName.appendChild(productPrice);
 
     contentHolder.appendChild(productCard);
   }
