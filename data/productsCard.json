@@ -1,4 +1,4 @@
-{ "results": [
+{ "productsdetails": [
     {
         "img" : "https://m.media-amazon.com/images/I/81mtQ+z5E1L.jpg",
         "name": "Aros Fleece Jacket",
@@ -58,6 +58,7 @@
         "img" : "https://m.media-amazon.com/images/I/71uV+SzeFnL.jpg",
         "name": "Handsy Crew",
         "price": "$19.99"
-} ] }
+}
+ ] }
 
    
