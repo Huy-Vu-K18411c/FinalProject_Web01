@@ -21,8 +21,57 @@
     <script src="../../functions/navigationbar.js"></script>
     <script src="../../functions/footer.js"></script>
     <title>Collections</title>
+    <script>
+      var app = angular.module("AngularApp", []);
+      app.controller("BlogController", function ($scope) {
+        $scope.blogs = [
+          {
+            title: "Title 1",
+            date: "22/12/2012",
+            detail:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
+            author: "Nhat Han",
+          },
+          {
+            title: "Title 2",
+            date: "21/12/2012",
+            detail:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
+            author: "Quang Huy",
+          },
+          {
+            title: "Title 3",
+            date: "21/12/2012",
+            detail:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
+            author: "Gian Don",
+          },
+          {
+            title: "Title 4",
+            date: "20/12/2012",
+            detail:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
+            author: "Hong Oanh",
+          },
+          {
+            title: "Title 5",
+            date: "20/12/2012",
+            detail:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
+            author: "Minh Thu",
+          },
+          {
+            title: "Title 6",
+            date: "19/12/2012",
+            detail:
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
+            author: "Nhat Han",
+          },
+        ];
+      });
+    </script>
   </head>
-  <body>
+  <body ng-app="AngularApp" ng-controller="BlogController">
     <div ng-app="navBar" class="component">
       <div ng-include="'../navigationbar/navigationbar.html'"></div>
     </div>
@@ -39,37 +88,20 @@
       </div>
       <div class="blog__body">
         <div class="blog__body__list">
-          <div class="blog__body__list__item">
+          <div class="blog__body__list__item" ng-repeat="dt in blogs">
             <img
               src="https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/3_88f1294b-6888-4672-bfae-674b5c6f27fc_540x.jpg?v=1589385253"
             />
             <p><label>LIFE STYLE</label></p>
-            <h4><b>Author</b> <span>dd/mm/yyyy</span></h4>
-            <h2>Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              officia, hic quidem facere voluptates assumenda perspiciatis quod
-              repudiandae fugiat esse cumque, molestiae, quasi recusandae aut
-              rerum illo quas maiores error. Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit
-            </p>
+            <h4>
+              <b>{{dt.author}}</b>
+              <span style="font-weight: normal; margin-left: 1em"
+                >{{dt.date}}</span
+              >
+            </h4>
+            <h2>{{dt.title}}</h2>
+            <p>{{dt.detail}}</p>
             <button>Read More ></button>
-          </div>
-          <div class="blog__body__list__item">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/3_88f1294b-6888-4672-bfae-674b5c6f27fc_540x.jpg?v=1589385253"
-            />
-            <p><label>LIFE STYLE</label></p>
-            <h4><b>Author</b> <span>dd/mm/yyyy</span></h4>
-            <h2>Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              officia, hic quidem facere voluptates assumenda perspiciatis quod
-              repudiandae fugiat esse cumque, molestiae, quasi recusandae aut
-              rerum illo quas maiores error. Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit
-            </p>
-            <button class="item">Read More ></button>
           </div>
         </div>
         <div class="blog__body__sidebar">
@@ -90,6 +122,79 @@
               margin-top: 3rem;
             "
           />
+          <div class="blog__body__sidebar__article">
+            <h2 style="line-height: 3">Recent Articles</h2>
+            <div
+              class="blog__body__sidebar__article__detail"
+              ng-repeat="blog in blogs"
+            >
+              <h3 style="line-height: 1.25">{{blog.title}}</h3>
+              <h4 style="font-weight: normal; line-height: 0.25">
+                {{blog.date}}
+              </h4>
+            </div>
+          </div>
+          <hr
+            style="
+              width: 75%;
+              right: 2rem;
+              position: relative;
+              margin-top: 3rem;
+            "
+          />
+          <div class="blog__body__sidebar__categories">
+            <h2 style="line-height: 3">Categories</h2>
+            <ul style="list-style-type: disc; padding-left: 1.5em">
+              <li>
+                <h4
+                  style="font-weight: normal; line-height: 0.25; margin-left: 0"
+                >
+                  Music
+                </h4>
+              </li>
+              <li>
+                <h4 style="font-weight: normal; line-height: 0.25">
+                  Education
+                </h4>
+              </li>
+              <li>
+                <h4 style="font-weight: normal; line-height: 0.25">
+                  Construction
+                </h4>
+              </li>
+              <li>
+                <h4 style="font-weight: normal; line-height: 0.25">Travel</h4>
+              </li>
+              <li>
+                <h4 style="font-weight: normal; line-height: 0.25">App</h4>
+              </li>
+              <li>
+                <h4 style="font-weight: normal; line-height: 0.25">Tech</h4>
+              </li>
+              <li>
+                <h4 style="font-weight: normal; line-height: 0.25">Social</h4>
+              </li>
+            </ul>
+          </div>
+          <hr
+            style="
+              width: 75%;
+              right: 2rem;
+              position: relative;
+              margin-top: 3rem;
+            "
+          />
+          <div class="blog__body__sidebar__tags">
+            <h2 style="line-height: 3">Articles Tags</h2>
+            <div class="blog__body__sidebar__tags__label">
+              <label>App</label>
+              <label>Conference</label>
+              <label>Developers</label>
+              <label>Enterprise</label>
+              <label>StartUp</label>
+            </div>
+          </div>
+          <div class="blog__body__sidebar__ads"></div>
         </div>
       </div>
     </div>
