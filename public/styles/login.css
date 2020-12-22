@@ -4,6 +4,7 @@
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   height: max-content;
+  background-color: #f3f2f2;
 }
 
 ul {

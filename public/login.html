@@ -5,15 +5,19 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./styles/login.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script type="text/javascript" src="./functions/index.js"></script>
     <script type="text/javascript" src="./functions/navigationbar.js"></script>
   </head>
   <body>
     <div ng-app="myApp" class="container">
+      <div class="row">
+        <nav-bar></nav-bar>
+      </div>
       <div class="container-th"></div>
       <div class="container-nd">
-        <div></div>
         <div class="login-form">
           <form action="" method="post">
             <h1>Login</h1>
@@ -35,6 +39,9 @@
             </div>
           </form>
         </div>
+      </div>
+      <div class="row">
+        <footer-web></footer-web>
       </div>
     </div>
   </body>
