@@ -101,8 +101,8 @@ h4.item > span {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 2vh;
+  width: 2vh;
   margin: 0 2px;
   border: 0.01rem solid var(--golden);
   border-radius: 50%;
@@ -121,6 +121,11 @@ h4.item > span {
   -moz-animation: slide 5s ease-in-out forwards;
   animation: slide 5s ease-in-out forwards;
 }
+button.item:hover{
+  background-color: var(--golden);
+  color: white; 
+  outline: none; 
+}
 
 @keyframes slide {
     from {transform: transition(0,0)}
@@ -133,5 +138,55 @@ h4.item > span {
   .next,
   .text {
     font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h1.item {
+    font-size: 150%;
+  }
+  h4.item {
+    font-size: 80%;
+  }
+  button.item {
+    font-size: 50%;
+  }
+  .mySlides > img {
+    width: 100vw;
+    margin-top: 10%;
+  }
+  .dot {
+    height: 1.5vh;
+    width: 1.5vh;
+  }
+  .info {
+    top: 55%;
+  }
+}
+@media only screen and (max-width: 700px) {
+ .info {
+    top: 30%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1.item {
+    font-size: 80%;
+  }
+  h4.item {
+    font-size: 50%;
+  }
+  button.item {
+    font-size: 30%;
+  }
+  .mySlides > img {
+    width: 100vw;
+    margin-top: 20%;
+  }
+  .info {
+    top: 35%;
+  }
+   .dot {
+    height: 1vh;
+    width: 1vh;
   }
 }

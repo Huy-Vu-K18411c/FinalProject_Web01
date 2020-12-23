@@ -19,7 +19,7 @@
       </div>
       <div class="carousel row" style="z-index: -1; margin-top: 5%">
         <div class="slideshow-container">
-          <div class="mySlides fade centered-content">
+          <div class="mySlides fade centered-content" id="mycarousel">
             <div class="numbertext">1 / 3</div>
             <img
               src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/slide11.jpg?v=1589382894"
@@ -59,7 +59,11 @@
           <h1>Shop by categories</h1>
           <p>Top categories in this week</p>
         </div>
-        <div class="centered-content product-category">
+        <div
+          class="centered-content product-category"
+          onclick="window.location.href='./shop.html'"
+          style="cursor: pointer"
+        >
           <div class="info">
             <h4 class="item">Quick parcel delivery, <span>from $25</span></h4>
             <h1 class="item">
@@ -328,6 +332,9 @@
       displayProduct(productHolder, 8);
       const productHolder2 = document.getElementById("productHolder2");
       displayProduct(productHolder2, 8);
+      document.getElementById("mycarousel").onclick = function () {
+        console.log("Hán");
+      };
     </script>
   </body>
 </html>

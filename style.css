@@ -167,3 +167,6 @@ ul {
   width: auto;
   height: 90%;
 }
+button.item :hover{
+  background-color: #ba933e;
+}
