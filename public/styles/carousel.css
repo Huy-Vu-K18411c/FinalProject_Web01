@@ -152,7 +152,6 @@ button.item:hover{
     font-size: 50%;
   }
   .mySlides > img {
-    width: 100vw;
     margin-top: 10%;
   }
   .dot {
@@ -179,7 +178,6 @@ button.item:hover{
     font-size: 30%;
   }
   .mySlides > img {
-    width: 100vw;
     margin-top: 20%;
   }
   .info {
