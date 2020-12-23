@@ -68,46 +68,55 @@ app.controller("CollectionController", function ($scope) {
 app.controller("BlogController", function ($scope) {
   $scope.blogs = [
     {
-      title: "Title 1",
+      title: "Anteposuerit litterarum formas.",
       date: "22/12/2012",
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-      author: "Nhat Han",
+      author: "Mr Vela .",
+      image: "https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/3_88f1294b-6888-4672-bfae-674b5c6f27fc_900x.jpg?v=1589385253"
     },
     {
-      title: "Title 2",
+      title: "Anteposuerit litterarum formas.",
       date: "21/12/2012",
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-      author: "Quang Huy",
+      author: "Mr. Johny Vu .",
+      image: "https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/2_eb88cb4f-f86a-4cd3-90e2-c0cc93bebc91_900x.jpg?v=1589385159"
     },
     {
-      title: "Title 3",
+      title: "Anteposuerit litterarum formas.",
       date: "21/12/2012",
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-      author: "Gian Don",
+      author: "Mrs. Tina .",
+      image: "https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/1_73ca91a3-2b15-4fbe-b2e7-2961ccc15eab_900x.jpg?v=1589385120"
     },
     {
-      title: "Title 4",
+      title: "Anteposuerit litterarum formas.",
       date: "20/12/2012",
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-      author: "Hong Oanh",
+      author: "Mr. Han .",
+      image: "https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/3_88f1294b-6888-4672-bfae-674b5c6f27fc_900x.jpg?v=1589385253"
+
     },
     {
-      title: "Title 5",
+      title: "Anteposuerit litterarum formas.",
       date: "20/12/2012",
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-      author: "Minh Thu",
+      author: "Mrs. Simple .",
+      image: "https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/2_eb88cb4f-f86a-4cd3-90e2-c0cc93bebc91_900x.jpg?v=1589385159"
+
     },
     {
-      title: "Title 6",
+      title: "Anteposuerit litterarum formas.",
       date: "19/12/2012",
       detail:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exofficia, hic quidem facere voluptates assumenda perspiciatis quodrepudiandae fugiat esse cumque, molestiae, quasi recusandae autrerum illo quas maiores error. Lorem ipsum dolor sit ametconsectetur, adipisicing elit...",
-      author: "Nhat Han",
+      author: "Mr. Han .",
+      image: "https://cdn.shopify.com/s/files/1/0276/4616/5110/articles/1_73ca91a3-2b15-4fbe-b2e7-2961ccc15eab_900x.jpg?v=1589385120"
+
     },
   ];
 });
