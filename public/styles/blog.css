@@ -181,6 +181,12 @@ a svg rect {
   .blog__body__sidebar__search {
     display: block;
   }
+  .blog__body__sidebar {
+    display: none;
+  }
+  .blog__body__sidebar__right{
+    display: none;
+  }
 }
 @media only screen and (max-width: 600px) {
   .blog__background img {
@@ -192,5 +198,8 @@ a svg rect {
     top: 50%;
     left: 5vw;
     transform: translate(10%, -50%);
+  }
+  .blog__body__sidebar {
+     display: none;
   }
 }

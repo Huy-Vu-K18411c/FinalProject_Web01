@@ -81,90 +81,96 @@
               margin-top: 3rem;
             "
           />
-          <div class="blog__body__sidebar__article">
-            <h2 style="line-height: 3">Recent Articles</h2>
+          <div class="blog__body__sidebar__right">
+            <div class="blog__body__sidebar__article">
+              <h2 style="line-height: 3">Recent Articles</h2>
+              <div
+                class="blog__body__sidebar__article__detail"
+                ng-repeat="blog in blogs"
+              >
+                <h3 style="line-height: 1.25">{{blog.title}}</h3>
+                <h4 style="font-weight: normal; line-height: 0.25">
+                  {{blog.date}}
+                </h4>
+              </div>
+            </div>
+            <hr
+              style="
+                width: 90%;
+                right: 2rem;
+                position: relative;
+                margin-top: 3rem;
+              "
+            />
+            <div class="blog__body__sidebar__categories">
+              <h2 style="line-height: 3">Categories</h2>
+              <ul style="list-style-type: disc; padding-left: 1.5em">
+                <li>
+                  <h4
+                    style="
+                      font-weight: normal;
+                      line-height: 0.25;
+                      margin-left: 0;
+                    "
+                  >
+                    Music
+                  </h4>
+                </li>
+                <li>
+                  <h4 style="font-weight: normal; line-height: 0.25">
+                    Education
+                  </h4>
+                </li>
+                <li>
+                  <h4 style="font-weight: normal; line-height: 0.25">
+                    Construction
+                  </h4>
+                </li>
+                <li>
+                  <h4 style="font-weight: normal; line-height: 0.25">Travel</h4>
+                </li>
+                <li>
+                  <h4 style="font-weight: normal; line-height: 0.25">App</h4>
+                </li>
+                <li>
+                  <h4 style="font-weight: normal; line-height: 0.25">Tech</h4>
+                </li>
+                <li>
+                  <h4 style="font-weight: normal; line-height: 0.25">Social</h4>
+                </li>
+              </ul>
+            </div>
+            <hr
+              style="
+                width: 90%;
+                right: 2rem;
+                position: relative;
+                margin-top: 3rem;
+              "
+            />
+            <div class="blog__body__sidebar__tags">
+              <h2 style="line-height: 3">Articles Tags</h2>
+              <div class="blog__body__sidebar__tags__label">
+                <label>App</label>
+                <label>Conference</label>
+                <label>Developers</label>
+                <label>Enterprise</label>
+                <label>StartUp</label>
+              </div>
+            </div>
             <div
-              class="blog__body__sidebar__article__detail"
-              ng-repeat="blog in blogs"
+              class="blog__body__sidebar__ads"
+              onmouseover="borderAnimation();"
+              onmouseout="stopAnimation();"
             >
-              <h3 style="line-height: 1.25">{{blog.title}}</h3>
-              <h4 style="font-weight: normal; line-height: 0.25">
-                {{blog.date}}
-              </h4>
+              <a href="#">
+                <svg><rect id="rect__border"></rect></svg>
+                <img
+                  id="advertise"
+                  src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/banner2_360x.jpg?v=1589383918"
+                />
+              </a>
             </div>
-          </div>
-          <hr
-            style="
-              width: 90%;
-              right: 2rem;
-              position: relative;
-              margin-top: 3rem;
-            "
-          />
-          <div class="blog__body__sidebar__categories">
-            <h2 style="line-height: 3">Categories</h2>
-            <ul style="list-style-type: disc; padding-left: 1.5em">
-              <li>
-                <h4
-                  style="font-weight: normal; line-height: 0.25; margin-left: 0"
-                >
-                  Music
-                </h4>
-              </li>
-              <li>
-                <h4 style="font-weight: normal; line-height: 0.25">
-                  Education
-                </h4>
-              </li>
-              <li>
-                <h4 style="font-weight: normal; line-height: 0.25">
-                  Construction
-                </h4>
-              </li>
-              <li>
-                <h4 style="font-weight: normal; line-height: 0.25">Travel</h4>
-              </li>
-              <li>
-                <h4 style="font-weight: normal; line-height: 0.25">App</h4>
-              </li>
-              <li>
-                <h4 style="font-weight: normal; line-height: 0.25">Tech</h4>
-              </li>
-              <li>
-                <h4 style="font-weight: normal; line-height: 0.25">Social</h4>
-              </li>
-            </ul>
-          </div>
-          <hr
-            style="
-              width: 90%;
-              right: 2rem;
-              position: relative;
-              margin-top: 3rem;
-            "
-          />
-          <div class="blog__body__sidebar__tags">
-            <h2 style="line-height: 3">Articles Tags</h2>
-            <div class="blog__body__sidebar__tags__label">
-              <label>App</label>
-              <label>Conference</label>
-              <label>Developers</label>
-              <label>Enterprise</label>
-              <label>StartUp</label>
-            </div>
-          </div>
-          <div
-            class="blog__body__sidebar__ads"
-            onmouseover="borderAnimation();"
-            onmouseout="stopAnimation();"
-          >
-            <a href="#">
-              <svg><rect id="rect__border"></rect></svg>
-              <img
-                id="advertise"
-                src="https://cdn.shopify.com/s/files/1/0276/4616/5110/files/banner2_360x.jpg?v=1589383918"
-              />
-            </a>
           </div>
         </div>
       </div>
