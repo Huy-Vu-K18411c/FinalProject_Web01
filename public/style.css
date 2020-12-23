@@ -136,6 +136,8 @@ ul {
   width: 90%;
   align-self: center;
   justify-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .productCard img {
@@ -143,7 +145,11 @@ ul {
   width: 100%;
   height: 70%;
   border-bottom: 1px solid #d9d9d9;
-  transition: all 1s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
 }
 
 .page-margin img {
