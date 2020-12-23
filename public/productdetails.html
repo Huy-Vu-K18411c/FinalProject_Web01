@@ -22,7 +22,7 @@
     <script src="./functions/productDisplay.js"></script>
   </head>
   <body ng-app="myApp">
-    <div>
+    <div style="z-index: 2">
       <nav-bar></nav-bar>
     </div>
     <main>
@@ -32,7 +32,7 @@
         <span>Back Tracksuit Jacket</span>
       </div>
       <div class="detail">
-        <div class="image-container">
+        <div style="z-index: 0" class="image-container">
           <img
             src="https://cdn.shopify.com/s/files/1/0276/4616/5110/products/1_1_9bc66c79-c94c-4d2b-a8e0-d429c3aa6b74_800x.jpg?v=1589787609"
             alt=""
@@ -99,6 +99,9 @@
               <i class="fas fa-shopping-basket"></i>
               Add To Cart
             </button>
+            <button onclick="window.location.href='./cart.html';">
+              Buy It Now
+            </button>
           </div>
           <b>Availability:</b> <span>In stock</span><br />
           <b>Product type:</b> <span>Demo Type</span><br />
@@ -137,21 +140,17 @@
             </tr>
             <tr style="height: 50px">
               <td>
-                <button
-                  class="buttonBT"
-                  onclick="window.location='./cart.html';"
-                >
-                  View Cart
+                <button class="buttonBT" id="btnViewCart">
+                  <a style="color: white" href="./cart.html">View Cart</a>
                 </button>
               </td>
             </tr>
             <tr style="height: 50px">
               <td>
-                <button
-                  class="buttonBT"
-                  onclick="window.location='./information.html';"
-                >
-                  Check Out
+                <button class="buttonBT" id="btnCheckout">
+                  <a style="color: white" href="./Information.html"
+                    >Check Out</a
+                  >
                 </button>
               </td>
             </tr>
@@ -177,12 +176,11 @@
 
       // Lấy phần span đóng Modal
       var span = document.getElementsByClassName("close")[0];
-
-      window.onload = function (event) {
-        if (event.target != modal) {
-          modal.style.display = "block";
-        }
+      const btnViewCart = document.getElementById("btnViewCart");
+      btnViewCart.onclick = function () {
+        window.location.reload();
       };
+
       // Khi button được click thi mở Modal
       btn.onclick = function () {
         modal.style.display = "block";

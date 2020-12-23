@@ -165,6 +165,7 @@
         style="background-color: #fff"
         type="button"
         value="Update Cart"
+        onclick="reloadPage()"
       />
       <input
         id="btnCheckOut"
@@ -179,7 +180,7 @@
       showTemplate(headerHolder, headerURL);
       const btnCheckOut = document.getElementById("btnCheckOut");
       btnCheckOut.onclick = function () {
-        window.location.href = "./information.html";
+        window.location.href = "/Information.html";
       };
       function reloadPage() {
         location.reload();
